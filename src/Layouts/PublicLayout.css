@@ -1,0 +1,29 @@
+/* =========================================================
+   PUBLIC LAYOUT
+========================================================= */
+
+.public-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  overflow-x: hidden;
+}
+
+.public-content {
+  width: 100%;
+
+  flex: 1;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}

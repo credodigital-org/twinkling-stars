@@ -1,0 +1,1941 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 700px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+
+  overflow: visible;
+
+  box-sizing: border-box;
+
+  font-family: "Nunito", sans-serif;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.hero-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1450px;
+  min-height: 650px;
+
+  margin: 0 auto;
+  padding: 0 45px;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LEFT TEXT
+========================================================= */
+
+.hero-text {
+  position: relative;
+
+  z-index: 10;
+
+  width: 47%;
+
+  padding-top: 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.hero-text h1 {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Rowdies", sans-serif;
+
+  font-size: clamp(52px, 5.5vw, 78px);
+  font-weight: 900;
+
+  line-height: 80px;
+
+  /* FIXED: percentage is invalid here */
+  letter-spacing: 0;
+
+  overflow: visible;
+}
+
+.hero-text h1 span {
+  display: block;
+
+  width: max-content;
+  max-width: 100%;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EXPLORE
+========================================================= */
+
+.hero-text h1 span:nth-child(1) {
+  color: #f0525c;
+
+  font-size: clamp(52px, 6vw, 85px);
+
+  margin-top: 0;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   LEARN
+========================================================= */
+
+.hero-text h1 span:nth-child(2) {
+  color: #08ace8;
+
+  font-size: clamp(52px, 6vw, 85px);
+
+  margin-top: 0;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   GROW TOGETHER
+========================================================= */
+
+.hero-text h1 span:nth-child(3) {
+  color: #00b848;
+
+  font-size: clamp(52px, 6vw, 85px);
+
+  margin-top: 0;
+
+  white-space: nowrap;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-text p {
+  width: 100%;
+  max-width: 430px;
+
+  margin: 30px 0 0;
+
+  padding: 0;
+
+  color: #111111;
+
+  font-family:
+    "Crimson Text",
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  /* FIXED */
+  letter-spacing: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO ADMISSION BUTTON
+========================================================= */
+
+.hero-section .admission-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 360px;
+  max-width: 100%;
+
+  min-height: 65px;
+
+  margin-top: 42px;
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: #ffb914;
+  color: #00519b;
+
+  font-family: "Rowdies", sans-serif;
+
+  font-size: 22px;
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  /* FIXED */
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-section .admission-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   RIGHT HERO IMAGE
+========================================================= */
+
+.hero-image {
+  position: relative;
+
+  z-index: 5;
+
+  /*
+    IMPORTANT:
+    47% text + 53% image = 100%
+  */
+  width: 53%;
+
+  height: 650px;
+
+  /*
+    Do not pull the image too far upward.
+  */
+  margin-top: 20px;
+  margin-right: -20px;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   CHILD IMAGE
+========================================================= */
+
+.hero-image img {
+  display: block;
+
+  width: 650px;
+  height: 650px;
+
+  max-width: none;
+  max-height: none;
+
+  object-fit: contain;
+  object-position: center;
+
+  overflow: visible;
+
+  animation:
+    heroChildFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   IMAGE FLOAT
+========================================================= */
+
+@keyframes heroChildFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.hero-decoration {
+  position: absolute;
+
+  display: block;
+
+  pointer-events: none;
+
+  z-index: 20;
+
+  object-fit: contain;
+
+  max-width: none;
+  max-height: none;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   SUN
+========================================================= */
+
+.hero-sun {
+  width: 95px;
+  height: 95px;
+
+  top: -10px;
+  left: 26%;
+
+  animation:
+    sunFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BEE
+========================================================= */
+
+.hero-bee {
+  width: 65px;
+  height: 65px;
+
+  top: 70px;
+  left: 51%;
+
+  animation:
+    beeMove 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CLOUD
+========================================================= */
+
+.hero-cloud {
+  width: 110px;
+  height: 80px;
+
+  top: -55px;
+  right: 5%;
+
+  animation:
+    cloudFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FLOWER
+========================================================= */
+
+.hero-flower {
+  width: 80px;
+  height: 90px;
+
+  top: 480px;
+  left: 48%;
+
+  animation:
+    flowerFloat 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   DECORATION ANIMATIONS
+========================================================= */
+
+@keyframes sunFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(8deg);
+  }
+}
+
+@keyframes beeMove {
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(-5deg);
+  }
+
+  50% {
+    transform:
+      translate(15px, -10px)
+      rotate(5deg);
+  }
+}
+
+@keyframes cloudFloat {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(12px);
+  }
+}
+
+@keyframes flowerFloat {
+  0%,
+  100% {
+    transform:
+      rotate(0deg)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      rotate(5deg)
+      translateY(-5px);
+  }
+}
+
+
+/* =========================================================
+   COLORFUL BOTTOM LINE
+========================================================= */
+
+.colorful-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 10px;
+
+  width: 100%;
+  height: 42px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: #f0525c;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 23px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  z-index: 30;
+
+  box-sizing: border-box;
+}
+
+.colorful-line-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  flex-shrink: 0;
+
+  animation:
+    colorfulMove 20s linear infinite;
+
+  will-change: transform;
+}
+
+.colorful-line-item {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding-right: 70px;
+
+  box-sizing: border-box;
+
+  line-height: 1;
+}
+
+.colorful-line-item span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 12px;
+
+  color: #f0525c;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+@keyframes colorfulMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1600px+
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  /* =======================================================
+     HERO SECTION
+  ======================================================= */
+
+  .hero-section {
+    width: 100%;
+    min-height: 720px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     HERO CONTENT
+  ======================================================= */
+
+  .hero-content {
+    width: 100%;
+    max-width: 1800px;
+
+    min-height: 690px;
+
+    margin: 0 auto;
+
+    padding-left: 65px;
+    padding-right: 35px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     LEFT TEXT
+  ======================================================= */
+
+  .hero-text {
+    width: 48%;
+
+    padding-top: 55px;
+
+    z-index: 10;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     HEADING
+  ======================================================= */
+
+  .hero-text h1 {
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+
+    overflow: visible;
+  }
+
+
+  .hero-text h1 span:nth-child(1),
+  .hero-text h1 span:nth-child(2),
+  .hero-text h1 span:nth-child(3) {
+
+    font-size: 95px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .hero-text p {
+    width: 100%;
+
+    max-width: 470px;
+
+    margin-top: 32px;
+
+    font-size: 33px;
+
+    line-height: 1.45;
+
+    letter-spacing: 0;
+  }
+
+
+  /* =======================================================
+     ADMISSION BUTTON
+  ======================================================= */
+
+  .hero-section .admission-button {
+    width: 590px;
+
+    max-width: 100%;
+
+    height: 90px;
+    min-height: 90px;
+
+    margin-top: 45px;
+
+    padding: 10px 25px;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* =======================================================
+     RIGHT HERO IMAGE
+  ======================================================= */
+
+  .hero-image {
+    width: 52%;
+
+    height: 690px;
+
+    margin-top: -20px;
+    margin-right: 10px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    z-index: 5;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     CHILD IMAGE
+  ======================================================= */
+
+  .hero-image img {
+    display: block;
+
+    width: 690px;
+    height: 720px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     SUN
+  ======================================================= */
+
+  .hero-sun {
+    width: 90px;
+    height: 90px;
+
+    top: 15px;
+    left: 29%;
+  }
+
+
+  /* =======================================================
+     BEE
+  ======================================================= */
+
+  .hero-bee {
+    width: 85px;
+    height: 85px;
+
+    top: 65px;
+    left: 55%;
+  }
+
+
+  /* =======================================================
+     CLOUD
+  ======================================================= */
+
+  .hero-cloud {
+    width: 135px;
+    height: 92px;
+
+    top: 10px;
+    right: 1%;
+  }
+
+
+  /* =======================================================
+     FLOWER
+  ======================================================= */
+
+  .hero-flower {
+    width: 135px;
+    height: 145px;
+
+    top: 520px;
+    left: 46%;
+  }
+
+
+  /* =======================================================
+     BOTTOM MOVING LINE
+  ======================================================= */
+
+  .colorful-line {
+    bottom: -8px;
+
+    height: 45px;
+
+    font-size: 23px;
+
+    letter-spacing: 3px;
+  }
+
+  .colorful-line-item {
+    padding-right: 70px;
+  }
+
+  .colorful-line-item span {
+    font-size: 28px;
+
+    margin-right: 12px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP / LAPTOP
+   1200px - 1599px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+
+  .hero-section {
+    min-height: 720px;
+
+    overflow: visible;
+  }
+
+  .hero-content {
+    min-height: 640px;
+
+    padding-left: 45px;
+    padding-right: 30px;
+
+    overflow: visible;
+  }
+
+  /* =======================================================
+     LEFT TEXT
+  ======================================================= */
+
+  .hero-text {
+    width: 47%;
+
+    padding-top: 40px;
+  }
+
+  .hero-text h1 span:nth-child(1),
+  .hero-text h1 span:nth-child(2),
+  .hero-text h1 span:nth-child(3) {
+    font-size: 90px;
+  }
+
+  .hero-text p {
+    max-width: 420px;
+
+    margin-top: 26px;
+
+    font-size: 30px;
+
+    line-height: 1.45;
+
+    letter-spacing: 0;
+  }
+
+  /* =======================================================
+     BUTTON
+  ======================================================= */
+
+  .hero-section .admission-button {
+    width: 590px;
+
+    height: 92px;
+
+    margin-top: 42px;
+
+    font-size: 36px;
+
+    letter-spacing: 2px;
+  }
+
+  /* =======================================================
+     IMAGE
+  ======================================================= */
+
+  .hero-image {
+    width: 53%;
+
+    height: 650px;
+
+    margin-top: 0px;
+    margin-right: -20px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 650px;
+    height: 650px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* =======================================================
+     SUN
+  ======================================================= */
+
+  .hero-sun {
+    width: 78px;
+    height: 78px;
+
+    top: 10px;
+    left: 29%;
+  }
+
+  /* =======================================================
+     BEE
+  ======================================================= */
+
+  .hero-bee {
+    width: 78px;
+    height: 78px;
+
+    top: 50px;
+    left: 55%;
+  }
+
+  /* =======================================================
+     CLOUD
+  ======================================================= */
+
+  .hero-cloud {
+    width: 120px;
+    height: 95px;
+
+    top: 5px;
+    right: 1%;
+  }
+
+  /* =======================================================
+     FLOWER
+  ======================================================= */
+
+  .hero-flower {
+    width: 150px;
+    height: 150px;
+
+    top: 485px;
+    left: 49%;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   1025px - 1199px
+========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+  .hero-section {
+    min-height: 550px;
+
+    overflow: visible;
+  }
+
+  .hero-content {
+    min-height: 510px;
+
+    padding-left: 40px;
+    padding-right: 25px;
+
+    overflow: visible;
+  }
+
+  /* TEXT */
+
+  .hero-text {
+    width: 50%;
+
+    padding-top: 65px;
+  }
+
+  .hero-text h1 span:nth-child(1),
+  .hero-text h1 span:nth-child(2),
+  .hero-text h1 span:nth-child(3) {
+    font-size: 57px;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    white-space: normal;
+  }
+
+  .hero-text p {
+    max-width: 450px;
+
+    margin-top: 24px;
+
+    font-size: 27px;
+
+    letter-spacing: 0;
+  }
+
+  /* BUTTON */
+
+  .hero-section .admission-button {
+    width: 450px;
+
+    height: 65px;
+
+    margin-top: 35px;
+
+    font-size: 25px;
+
+    letter-spacing: 1.5px;
+  }
+
+  /* IMAGE */
+
+  .hero-image {
+    width: 50%;
+
+    height: 560px;
+
+    margin-top: 0;
+    margin-right: 10px;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 500px;
+    height: 500px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+  /* DECORATIONS */
+
+  .hero-sun {
+    width: 52px;
+    height: 52px;
+
+    margin-top: 20px;
+  }
+
+  .hero-bee {
+    width: 52px;
+    height: 52px;
+
+    top: 50px;
+  }
+
+  .hero-cloud {
+    width: 95px;
+    height: 72px;
+
+    top: 10px;
+    right: 10px;
+  }
+
+  .hero-flower {
+    width: 65px;
+    height: 75px;
+
+    top: 435px;
+    left: 530px;
+  }
+
+  /* BOTTOM LINE */
+
+  .colorful-line {
+    font-size: 15px;
+
+    letter-spacing: 2px;
+  }
+
+  .colorful-line-item span {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .hero-section {
+    min-height: 400px;
+
+    overflow: visible;
+  }
+
+  .hero-content {
+    min-height: 460px;
+
+    padding-left: 25px;
+    padding-right: 20px;
+
+    overflow: visible;
+  }
+
+  /* TEXT */
+
+  .hero-text {
+    width: 50%;
+
+    padding-top: 30px;
+  }
+
+  .hero-text h1 {
+    line-height: 1.02;
+  }
+
+  .hero-text h1 span:nth-child(1),
+  .hero-text h1 span:nth-child(2),
+  .hero-text h1 span:nth-child(3) {
+    font-size: 54px;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    white-space: normal;
+  }
+
+  .hero-text p {
+    max-width: 415px;
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    letter-spacing: 0;
+  }
+
+  /* BUTTON */
+
+  .hero-section .admission-button {
+    width: 435px;
+
+    height: 58px;
+
+    margin-top: 48px;
+
+    font-size: 27px;
+
+    letter-spacing: 1px;
+
+    border-radius: 12px;
+  }
+
+  /* IMAGE */
+
+  .hero-image {
+    width: 50%;
+
+    height: 480px;
+
+    margin-top: 0;
+    margin-right: 20px;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 410px;
+    height: 410px;
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+  }
+
+  /* DECORATIONS */
+
+  .hero-sun {
+    width: 46px;
+    height: 46px;
+
+    top: 5px;
+  }
+
+  .hero-bee {
+    width: 46px;
+    height: 46px;
+
+    top: 45px;
+    left: 510px;
+  }
+
+  .hero-cloud {
+    width: 72px;
+    height: 52px;
+
+    top: 10px;
+    right: 15px;
+  }
+
+  .hero-flower {
+    width: 58px;
+    height: 68px;
+
+    top: 330px;
+    left: 52%;
+  }
+
+  /* BOTTOM LINE */
+
+  .colorful-line {
+    bottom: 5px;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+  }
+
+  .colorful-line-item span {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    min-height: auto;
+
+    overflow: visible;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: auto;
+
+    margin: 0;
+
+    padding: 5px 14px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     MOBILE IMAGE
+  ======================================================= */
+
+  .hero-image {
+    order: 1;
+
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    margin: 5px 0 0;
+    padding: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    z-index: 5;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    display: block;
+
+    width: min(370px, 94vw);
+    height: min(370px, 94vw);
+
+    max-width: none;
+    max-height: none;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+  }
+
+
+  /* =======================================================
+     MOBILE TEXT
+  ======================================================= */
+
+  .hero-text {
+    order: 2;
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 0;
+
+    margin: 20px 0 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 10;
+  }
+
+
+  /* =======================================================
+     MOBILE HEADING
+  ======================================================= */
+
+  .hero-text h1 {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 48px;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+
+    text-align: center;
+
+    overflow: visible;
+  }
+
+  .hero-text h1 span:nth-child(1) {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 !important;
+
+    color: #f0525c;
+
+    font-size: clamp(42px, 12.5vw, 54px);
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-align: center;
+  }
+
+  .hero-text h1 span:nth-child(2) {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 2px 0 0;
+
+    color: #08ace8;
+
+    font-size: clamp(42px, 12.5vw, 54px);
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-align: center;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 3px 0 0;
+
+    color: #00b848;
+
+    font-size: clamp(32px, 10vw, 43px);
+
+    line-height: 1.05;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* =======================================================
+     MOBILE DESCRIPTION
+  ======================================================= */
+
+  .hero-text p {
+    width: 100%;
+
+    max-width: 340px;
+
+    margin: 20px auto 0;
+
+    padding: 0;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: 0;
+
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     MOBILE BUTTON
+  ======================================================= */
+
+  .hero-section .admission-button {
+    order: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: min(320px, 90vw);
+
+    height: 58px;
+    min-height: 58px;
+
+    margin: 24px auto 0;
+
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #ffb914;
+    color: #00519b;
+
+    font-family: "Rowdies", sans-serif;
+
+    font-size: 17px;
+    font-weight: 900;
+
+    line-height: 1.1;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     MOBILE DECORATIONS
+  ======================================================= */
+
+  .hero-decoration {
+    z-index: 20;
+
+    max-width: none;
+    max-height: none;
+
+    overflow: visible;
+  }
+
+  .hero-sun {
+    width: 42px;
+    height: 42px;
+
+    top: 165px;
+    left: 7%;
+  }
+
+  .hero-bee {
+    width: 42px;
+    height: 42px;
+
+    top: 280px;
+    left: 5%;
+  }
+
+  .hero-cloud {
+    width: 68px;
+    height: 50px;
+
+    top: 135px;
+    right: 4%;
+  }
+
+  .hero-flower {
+    width: 38px;
+    height: 68px;
+
+    top: auto;
+    left: auto;
+
+    right: 50%;
+    bottom: 43px;
+
+    transform: translateX(50%);
+  }
+
+
+  /* =======================================================
+     MOBILE BOTTOM LINE
+  ======================================================= */
+
+  .colorful-line {
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 30px;
+
+    padding: 0 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .colorful-line-item {
+    padding-right: 38px;
+  }
+
+  .colorful-line-item span {
+    margin-right: 7px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   390px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero-section {
+    min-height: auto;
+
+    overflow: visible;
+  }
+
+  .hero-content {
+    padding: 3px 12px 52px;
+
+    overflow: visible;
+  }
+
+  .hero-image {
+    margin-top: 5px;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 92vw;
+    height: 92vw;
+
+    max-width: 350px;
+    max-height: 350px;
+
+    object-fit: contain;
+  }
+
+  .hero-text {
+    margin-top: 8px;
+  }
+
+  .hero-text h1 span:nth-child(1) {
+    font-size: 51px;
+
+    line-height: 0.98;
+  }
+
+  .hero-text h1 span:nth-child(2) {
+    font-size: 51px;
+
+    line-height: 0.98;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    font-size: 37px;
+
+    line-height: 1;
+
+    margin-top: 4px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-text p {
+    max-width: 330px;
+
+    margin-top: 19px;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    letter-spacing: 0;
+  }
+
+  .hero-section .admission-button {
+    width: 300px;
+    max-width: 90vw;
+
+    height: 56px;
+    min-height: 56px;
+
+    margin-top: 23px;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+  }
+
+  .hero-sun {
+    width: 38px;
+    height: 38px;
+
+    top: 35px;
+    left: 7%;
+  }
+
+  .hero-bee {
+    width: 38px;
+    height: 38px;
+
+    top: 315px;
+    left: 15%;
+  }
+
+  .hero-cloud {
+    width: 62px;
+    height: 46px;
+
+    top: 30px;
+    right: 3%;
+  }
+
+  .hero-flower {
+    width: 44px;
+    height: 64px;
+
+    bottom: 230px;
+
+    right: 17%;
+  }
+
+  .colorful-line {
+    height: 27px;
+
+    font-size: 8.5px;
+
+    letter-spacing: 1px;
+  }
+
+  .colorful-line-item {
+    padding-right: 32px;
+  }
+
+  .colorful-line-item span {
+    font-size: 10px;
+
+    margin-right: 6px;
+  }
+}
+
+
+/* =========================================================
+   361px - 389px
+========================================================= */
+
+@media (max-width: 389px) {
+
+  .hero-section {
+    overflow: visible;
+  }
+
+  .hero-content {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    overflow: visible;
+  }
+
+  .hero-image {
+    margin-top: 5px;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 92vw;
+    height: 92vw;
+
+    max-width: 330px;
+    max-height: 330px;
+  }
+
+  .hero-text {
+    margin-top: 17px;
+  }
+
+  .hero-text h1 span:nth-child(1) {
+    font-size: 47px;
+  }
+
+  .hero-text h1 span:nth-child(2) {
+    font-size: 47px;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    font-size: 34px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .hero-text p {
+    max-width: 310px;
+
+    font-size: 14px;
+
+    margin-top: 17px;
+
+    letter-spacing: 0;
+  }
+
+  .hero-section .admission-button {
+    width: 285px;
+
+    height: 53px;
+    min-height: 53px;
+
+    font-size: 15px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .hero-sun {
+    width: 35px;
+    height: 35px;
+
+    top: 160px;
+  }
+
+  .hero-bee {
+    width: 35px;
+    height: 35px;
+
+    top: 270px;
+  }
+
+  .hero-cloud {
+    width: 58px;
+    height: 43px;
+
+    top: 135px;
+  }
+
+  .hero-flower {
+    width: 50px;
+    height: 60px;
+
+    bottom: 48px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero-section {
+    overflow: visible;
+  }
+
+  .hero-content {
+    padding: 0 8px 50px;
+
+    overflow: visible;
+  }
+
+  .hero-image {
+    margin-top: 3px;
+
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 92vw;
+    height: 92vw;
+
+    max-width: 310px;
+    max-height: 310px;
+  }
+
+  .hero-text {
+    margin-top: 15px;
+  }
+
+  .hero-text h1 span:nth-child(1) {
+    font-size: 43px;
+  }
+
+  .hero-text h1 span:nth-child(2) {
+    font-size: 43px;
+  }
+
+  .hero-text h1 span:nth-child(3) {
+    font-size: 31px;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-text p {
+    max-width: 290px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0;
+  }
+
+  .hero-section .admission-button {
+    width: 270px;
+
+    height: 50px;
+    min-height: 50px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    border-radius: 11px;
+  }
+
+  .hero-sun {
+    width: 32px;
+    height: 32px;
+
+    top: 150px;
+  }
+
+  .hero-bee {
+    width: 32px;
+    height: 32px;
+
+    top: 255px;
+  }
+
+  .hero-cloud {
+    width: 53px;
+    height: 40px;
+
+    top: 130px;
+  }
+
+  .hero-flower {
+    width: 46px;
+    height: 55px;
+
+    bottom: 48px;
+  }
+
+  .colorful-line {
+    height: 25px;
+
+    font-size: 5.5px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .colorful-line-item {
+    padding-right: 26px;
+  }
+
+  .colorful-line-item span {
+    font-size: 9px;
+
+    margin-right: 5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-section,
+  .hero-image img,
+  .hero-decoration,
+  .colorful-line-track,
+  .hero-section .admission-button {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+  .hero-section {
+    opacity: 1;
+
+    transform: none;
+  }
+}

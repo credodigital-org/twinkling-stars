@@ -1,0 +1,2663 @@
+/* =========================================================
+   PROGRAMS PAGE
+   FULLY RESPONSIVE
+   DESKTOP / LAPTOP / TABLET / MOBILE
+========================================================= */
+
+.programs-page,
+.programs-page * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+/* .programs-page {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: visible;
+
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+
+  background-image: url("../assets/images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+} */
+
+.programs-page {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: visible;
+
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+
+  background-image: url("../assets/images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.programs-page .programs-hero {
+  width: 100%;
+  max-width: 1360px;
+
+  margin: -35px auto 0;
+  padding: 0 28px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 30px;
+}
+
+
+.programs-page .hero-text {
+  width: 100%;
+  padding-top: 10px;
+
+  position: relative;
+  z-index: 1;
+
+  text-align: left;
+}
+
+
+.programs-page .hero-text h1 {
+  width: 100%;
+
+  margin: 0 0 30px;
+  padding: 0;
+
+  color: #07157b;
+  margin-top: -70px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+
+.programs-page .hero-text p {
+  width: 510px;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  color: #111111;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-align: left;
+  font-family: Poppins, sans-serif;
+}
+
+
+.programs-page .hero-image {
+  width: 100%;
+
+  margin-top: -10px;
+  padding: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  position: relative;
+  z-index: 1;
+
+  overflow: visible;
+}
+
+
+.programs-page .hero-image img {
+  display: block;
+
+  width: min(120%, 950px);
+  max-width: 120%;
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius:
+    45% 35% 28% 40% /
+    40% 32% 38% 42%;
+}
+
+
+/* =========================================================
+   REGULAR + SPECIAL PROGRAMS
+========================================================= */
+
+.programs-page .regular-programs,
+.programs-page .special-programs {
+  position: relative;
+
+  width: calc(100% - 40px);
+  max-width: 1120px;
+
+  margin: 70px auto 0;
+  padding: 0;
+}
+
+
+.programs-page .program-list {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   PROGRAM CARD
+========================================================= */
+
+.programs-page .program-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 220px;
+  height: auto;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.025);
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 25px;
+  gap: 45px;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   LEFT CARD
+========================================================= */
+
+.programs-page .program-card.left {
+  flex-direction: row;
+}
+
+.programs-page .program-card.left .program-image-box {
+  order: 1;
+}
+
+.programs-page .program-card.left .program-description {
+  order: 2;
+}
+
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.programs-page .program-card.right {
+  flex-direction: row;
+}
+
+.programs-page .program-card.right .program-description {
+  order: 1;
+}
+
+.programs-page .program-card.right .program-image-box {
+  order: 2;
+}
+
+
+/* =========================================================
+   PROGRAM DESCRIPTION
+========================================================= */
+
+.programs-page .program-description {
+  flex: 1;
+  min-width: 0;
+
+  position: relative;
+  z-index: 2;
+
+  color: #111111;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+
+/* =========================================================
+   PROGRAM IMAGE BOX
+========================================================= */
+
+.programs-page .program-image-box {
+  position: relative;
+  z-index: 3;
+
+  width: 185px;
+  min-width: 185px;
+  height: 178px;
+
+  flex-shrink: 0;
+
+  border-radius: 5px;
+
+  background: #f5ffb0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  text-align: center;
+}
+
+
+.programs-page .program-image-box img {
+  display: block;
+
+  width: 92px;
+  height: 92px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  margin-bottom: 2px;
+}
+
+
+.programs-page .program-image-box h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+
+.programs-page .program-image-box strong {
+  margin-top: 5px;
+
+  color: #111111;
+
+  font-size: 8px;
+  line-height: 1.1;
+}
+
+
+.programs-page .program-image-box p {
+  max-width: 125px;
+
+  margin: 7px 0 0;
+
+  color: #555555;
+
+  font-size: 7px;
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   REGULAR PROGRAM COLORS
+========================================================= */
+
+.programs-page .regular-card:nth-child(1) .program-image-box {
+  background: #ffc9b9;
+}
+
+.programs-page .regular-card:nth-child(2) .program-image-box {
+  background: #ffe9a9;
+}
+
+.programs-page .regular-card:nth-child(3) .program-image-box {
+  background: #d5ff9c;
+}
+
+.programs-page .regular-card:nth-child(4) .program-image-box {
+  background: #cce5f5;
+}
+
+
+/* =========================================================
+   SPECIAL PROGRAM COLORS
+========================================================= */
+
+.programs-page .special-card .program-image-box {
+  background: #f7ffad;
+}
+
+
+/* =========================================================
+   DECORATIONS
+   IMPORTANT:
+   Decorations intentionally overflow the card.
+========================================================= */
+
+.programs-page .program-decoration {
+  position: absolute;
+
+  z-index: 10;
+
+  display: block;
+
+  pointer-events: none;
+
+  object-fit: contain;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* SUN */
+
+.programs-page .decoration-sun {
+  width: 62px;
+  height: 62px;
+
+  right: -30px;
+  top: -32px;
+}
+
+
+/* CLOUD */
+
+.programs-page .decoration-cloud {
+  width: 72px;
+  height: 55px;
+
+  left: -8px;
+  top: -28px;
+}
+
+
+/* FLOWER */
+
+.programs-page .decoration-flower {
+  width: 62px;
+  height: 62px;
+
+  right: -18px;
+  top: -28px;
+}
+
+
+/* BEE */
+
+.programs-page .decoration-bee {
+  width: 78px;
+  height: 58px;
+
+  left: -18px;
+  top: -35px;
+}
+
+
+/* =========================================================
+   SPECIAL PROGRAMS TITLE
+========================================================= */
+
+.programs-page .special-programs {
+  margin-top: 85px;
+}
+
+
+.programs-page .special-programs h2 {
+  margin: 0 0 30px;
+  margin-left: -100px;
+
+  color: #07157b;
+
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.programs-page .benefits-section {
+  width: 100%;
+
+  margin-top: 20px;
+  padding: 0 30px 70px;
+
+  text-align: center;
+}
+
+
+.programs-page .benefits-section h2 {
+  margin: 0 0 55px;
+
+  color: #c90054;
+
+  font-size: 29px;
+  font-weight: 400;
+}
+
+
+.programs-page .benefits-grid {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 50px;
+}
+
+
+.programs-page .benefit-item {
+  text-align: center;
+}
+
+
+.programs-page .benefit-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffd6de;
+
+  color: #c90054;
+
+  font-size: 26px;
+}
+
+
+.programs-page .benefit-item:nth-child(2) .benefit-icon {
+  background: #ffddb0;
+}
+
+.programs-page .benefit-item:nth-child(3) .benefit-icon {
+  background: #c9f29b;
+}
+
+.programs-page .benefit-item:nth-child(4) .benefit-icon {
+  background: #dedaf5;
+}
+
+
+.programs-page .benefit-item h3 {
+  margin: 0 0 8px;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.programs-page .benefit-item p {
+  max-width: 220px;
+
+  margin: 0 auto;
+
+  color: #654848;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADMISSION / CTA
+========================================================= */
+
+.programs-page .admission-section {
+  position: relative;
+
+  width: 100%;
+  height: 716px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #fff0c5 0,
+      #fff0c5 630px,
+      #ffffff 630px,
+      #ffffff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CTA IMAGE
+========================================================= */
+
+.programs-page .admission-image-wrapper {
+  position: absolute;
+
+  left: -30px;
+  top: 10px;
+
+  width: 700px;
+  height: 480px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.programs-page .admission-image {
+  display: block;
+
+  width: 670px;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.programs-page .admission-content {
+  position: absolute;
+
+  top: 55px;
+  left: 42%;
+
+  width: 58%;
+
+  padding-right: 35px;
+}
+
+
+/* =========================================================
+   CTA TITLE
+========================================================= */
+
+.programs-page .admission-title {
+  margin: 0;
+  margin-top: 60px;
+
+  color: #71370e;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 54px;
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CTA DESCRIPTION
+========================================================= */
+
+.programs-page .admission-description {
+  margin: 48px 0 0;
+
+  color: #050505;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 45px;
+  font-weight: 400;
+
+  line-height: 1.8;
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.programs-page .admission-button {
+  position: absolute;
+
+  left: 50%;
+  top: 568px;
+
+  transform: translateX(-50%);
+
+  width: 480px;
+  height: 120px;
+
+  border: none;
+  border-radius: 24px;
+
+  background: #e5960a;
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 5;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.programs-page .admission-button:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+
+  box-shadow:
+    0 8px 18px rgba(120, 75, 0, 0.2);
+}
+
+
+.programs-page .admission-button:active {
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+.programs-page .admission-button:focus-visible {
+  outline:
+    4px solid
+    rgba(229, 150, 10, 0.35);
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   1025px - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .programs-page .programs-hero {
+    max-width: 1100px;
+    padding: 0 25px;
+  }
+
+
+  .programs-page .hero-text h1 {
+    font-size: 52px;
+  }
+
+
+  .programs-page .hero-text p {
+    font-size: 20px;
+  }
+
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    max-width: 950px;
+  }
+
+
+  .programs-page .program-card {
+    gap: 30px;
+  }
+
+
+  .programs-page .special-programs h2 {
+    margin-left: 0;
+    font-size: 54px;
+  }
+
+
+  .programs-page .admission-image-wrapper {
+    left: 30px;
+    width: 570px;
+  }
+
+
+  .programs-page .admission-image {
+    width: 560px;
+  }
+
+
+  .programs-page .admission-content {
+    left: 45%;
+    width: 55%;
+  }
+
+
+  .programs-page .admission-title {
+    font-size: 50px;
+  }
+
+
+  .programs-page .admission-description {
+    font-size: 34px;
+    line-height: 1.6;
+  }
+
+
+  .programs-page .admission-button {
+    width: 430px;
+    height: 100px;
+
+    top: 575px;
+
+    font-size: 50px;
+  }
+}
+
+
+/* =========================================================
+   IPAD PRO 13-INCH
+   1024px - 1366px
+   LANDSCAPE + PORTRAIT
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  /* =======================================================
+     PAGE
+  ======================================================= */
+
+  .programs-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: visible;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .programs-page .programs-hero {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: -5px auto 0;
+    padding: 30px 35px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 35px;
+  }
+
+
+  .programs-page .hero-text {
+    width: 100%;
+    padding-top: 0;
+  }
+
+
+  .programs-page .hero-text h1 {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+
+    white-space: normal;
+  }
+
+
+  .programs-page .hero-text p {
+    width: 100%;
+    max-width: 500px;
+
+    font-size: 20px;
+    line-height: 1.55;
+  }
+
+
+  .programs-page .hero-image {
+    width: 100%;
+
+    margin-top: 0;
+
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .programs-page .hero-image img {
+    width: min(115%, 600px);
+    max-width: 100%;
+  }
+
+
+  /* =======================================================
+     REGULAR + SPECIAL PROGRAMS
+  ======================================================= */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 70px);
+    max-width: 1080px;
+
+    margin: 65px auto 0;
+  }
+
+
+  .programs-page .program-list {
+    width: 100%;
+    gap: 28px;
+  }
+
+
+  /* =======================================================
+     PROGRAM CARD
+  ======================================================= */
+
+  .programs-page .program-card {
+    width: 100%;
+    min-height: 205px;
+
+    padding: 18px 24px;
+
+    gap: 32px;
+
+    border-radius: 14px;
+  }
+
+
+  /* =======================================================
+     IMAGE BOX
+  ======================================================= */
+
+  .programs-page .program-image-box {
+    width: 170px;
+    min-width: 170px;
+    height: 165px;
+
+    padding: 10px;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 2px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 15px;
+  }
+
+
+  .programs-page .program-image-box strong {
+    font-size: 8px;
+  }
+
+
+  .programs-page .program-image-box p {
+    max-width: 120px;
+
+    margin-top: 6px;
+
+    font-size: 7px;
+    line-height: 1.2;
+  }
+
+
+  /* =======================================================
+     DESCRIPTION
+  ======================================================= */
+
+  .programs-page .program-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  /* =======================================================
+     DECORATIONS
+  ======================================================= */
+
+  .programs-page .decoration-sun {
+    width: 55px;
+    height: 55px;
+
+    right: -26px;
+    top: -29px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 64px;
+    height: 49px;
+
+    left: -8px;
+    top: -25px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 55px;
+    height: 55px;
+
+    right: -16px;
+    top: -25px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 68px;
+    height: 51px;
+
+    left: -16px;
+    top: -31px;
+  }
+
+
+  /* =======================================================
+     SPECIAL PROGRAMS TITLE
+  ======================================================= */
+
+  .programs-page .special-programs {
+    margin-top: 75px;
+  }
+
+
+  .programs-page .special-programs h2 {
+    margin: 0 0 28px;
+    margin-left: 0;
+
+    font-size: 52px;
+    line-height: 1.1;
+
+    text-align: left;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .programs-page .benefits-section {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 0 35px 65px;
+  }
+
+
+  .programs-page .benefits-section h2 {
+    margin-bottom: 45px;
+
+    font-size: 27px;
+  }
+
+
+  .programs-page .benefits-grid {
+    width: 100%;
+    max-width: 1000px;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 28px;
+  }
+
+
+  .programs-page .benefit-icon {
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 20px;
+
+    font-size: 25px;
+  }
+
+
+  .programs-page .benefit-item h3 {
+    font-size: 15px;
+  }
+
+
+  .programs-page .benefit-item p {
+    max-width: 210px;
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* =======================================================
+     ADMISSION / CTA
+  ======================================================= */
+
+  .programs-page .admission-section {
+    width: 100%;
+    height: 610px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 525px,
+        #ffffff 525px,
+        #ffffff 100%
+      );
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     CTA IMAGE
+  ======================================================= */
+
+  .programs-page .admission-image-wrapper {
+    left: -10px;
+    top: 20px;
+
+    width: 480px;
+    height: 400px;
+  }
+
+
+  .programs-page .admission-image {
+    width: 460px;
+    max-width: 100%;
+  }
+
+
+  /* =======================================================
+     CTA CONTENT
+  ======================================================= */
+
+  .programs-page .admission-content {
+    top: 45px;
+    left: 43%;
+
+    width: 54%;
+
+    padding-right: 25px;
+  }
+
+
+  /* =======================================================
+     CTA TITLE
+  ======================================================= */
+
+  .programs-page .admission-title {
+    margin-top: 35px;
+
+    font-size: 43px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+
+    white-space: normal;
+  }
+
+
+  /* =======================================================
+     CTA DESCRIPTION
+  ======================================================= */
+
+  .programs-page .admission-description {
+    margin-top: 30px;
+
+    font-size: 29px;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+
+
+  /* =======================================================
+     CTA BUTTON
+  ======================================================= */
+
+  .programs-page .admission-button {
+    left: 50%;
+    top: 475px;
+
+    width: 380px;
+    height: 85px;
+
+    border-radius: 18px;
+
+    font-size: 42px;
+  }
+}
+
+
+/* =========================================================
+   IPAD PRO 13-INCH PORTRAIT
+   APPROX. 1024px WIDTH
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .programs-page .programs-hero {
+    max-width: 1000px;
+    margin-top: -130px;
+
+    padding: 30px 28px 0;
+
+    gap: 25px;
+  }
+
+
+  .programs-page .hero-text h1 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+
+  .programs-page .hero-text p {
+    max-width: 430px;
+
+    font-size: 18px;
+  }
+
+
+  .programs-page .hero-image img {
+    width: 100%;
+    max-width: 470px;
+  }
+
+
+  /* =======================================================
+     PROGRAM SECTIONS
+  ======================================================= */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 55px);
+    max-width: 930px;
+
+    margin-top: 55px;
+  }
+
+
+  .programs-page .program-list {
+    gap: 24px;
+  }
+
+
+  /* =======================================================
+     CARDS
+  ======================================================= */
+
+  .programs-page .program-card {
+    min-height: 190px;
+
+    padding: 16px 20px;
+
+    gap: 24px;
+  }
+
+
+  .programs-page .program-image-box {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 74px;
+    height: 74px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 14px;
+  }
+
+
+  .programs-page .program-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+
+  /* =======================================================
+     SPECIAL TITLE
+  ======================================================= */
+
+  .programs-page .special-programs h2 {
+    font-size: 46px;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .programs-page .benefits-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+  .programs-page .benefits-grid {
+    gap: 20px;
+  }
+
+
+  .programs-page .benefit-item p {
+    font-size: 13px;
+  }
+
+
+  /* =======================================================
+     CTA
+  ======================================================= */
+
+  .programs-page .admission-section {
+    height: 550px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 465px,
+        #ffffff 465px,
+        #ffffff 100%
+      );
+  }
+
+
+  .programs-page .admission-image-wrapper {
+    left: -20px;
+    top: 5px;
+
+    width: 400px;
+    height: 350px;
+  }
+
+
+  .programs-page .admission-image {
+    width: 390px;
+  }
+
+
+  .programs-page .admission-content {
+    top: 40px;
+    left: 45%;
+
+    width: 53%;
+  }
+
+
+  .programs-page .admission-title {
+    margin-top: 55px;
+
+    font-size: 47px;
+  }
+
+
+  .programs-page .admission-description {
+    margin-top: 25px;
+
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+
+  .programs-page .admission-button {
+    top: 430px;
+
+    width: 320px;
+    height: 72px;
+
+    font-size: 36px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  /* HERO */
+
+  .programs-page .programs-hero {
+    margin-top: 0;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 25px 22px 0;
+
+    gap: 20px;
+  }
+
+
+  .programs-page .hero-text {
+    padding-top: 0;
+  }
+
+
+  .programs-page .hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 22px;
+  }
+
+
+  .programs-page .hero-text p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+
+  .programs-page .hero-image {
+    margin-top: 40px;
+  }
+
+
+  .programs-page .hero-image img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+
+  /* PROGRAMS */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 50px);
+    max-width: 900px;
+
+    margin-top: 55px;
+  }
+
+
+  .programs-page .program-card {
+    min-height: 190px;
+    max-height: none;
+
+    gap: 25px;
+    padding: 18px;
+  }
+
+
+  .programs-page .program-image-box {
+    width: 155px;
+    min-width: 155px;
+    height: 155px;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 75px;
+    height: 75px;
+  }
+
+
+  .programs-page .program-description {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+
+  /* SPECIAL TITLE */
+
+  .programs-page .special-programs h2 {
+    margin-left: 0;
+
+    font-size: 48px;
+    text-align: left;
+  }
+
+
+  /* DECORATIONS */
+
+  .programs-page .decoration-sun {
+    width: 52px;
+    height: 52px;
+
+    right: -24px;
+    top: -27px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 62px;
+    height: 48px;
+
+    left: -8px;
+    top: -25px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 52px;
+    height: 52px;
+
+    right: -15px;
+    top: -25px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 65px;
+    height: 50px;
+
+    left: -15px;
+    top: -30px;
+  }
+
+
+  /* BENEFITS */
+
+  .programs-page .benefits-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+  .programs-page .benefits-grid {
+    gap: 25px;
+  }
+
+
+  .programs-page .benefit-item p {
+    font-size: 14px;
+  }
+
+
+  /* CTA */
+
+  .programs-page .admission-section {
+    height: 520px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 440px,
+        #ffffff 440px,
+        #ffffff 100%
+      );
+  }
+
+
+  .programs-page .admission-image-wrapper {
+    left: -20px;
+    top: 20px;
+
+    width: 370px;
+    height: 330px;
+  }
+
+
+  .programs-page .admission-image {
+    width: 390px;
+  }
+
+
+  .programs-page .admission-content {
+    top: 45px;
+    left: 48%;
+
+    width: 55%;
+
+    padding-right: 15px;
+  }
+
+
+  .programs-page .admission-title {
+    font-size: 38px;
+    letter-spacing: -0.8px;
+
+    white-space: normal;
+  }
+
+
+  .programs-page .admission-description {
+    margin-top: 25px;
+
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+
+  .programs-page .admission-button {
+    top: 395px;
+
+    width: 330px;
+    height: 80px;
+
+    border-radius: 18px;
+
+    font-size: 38px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET PORTRAIT
+   BELOW 767px
+
+   IMPORTANT:
+   ALL PROGRAM CARDS:
+   IMAGE TOP
+   TEXT BOTTOM
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .programs-page {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: visible;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .programs-page .programs-hero {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 25px 20px 0;
+
+    text-align: center;
+  }
+
+
+  .programs-page .hero-text {
+    width: 100%;
+    padding: 0;
+    margin-top: 50px;
+
+    text-align: center;
+  }
+
+
+  .programs-page .hero-text h1 {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+
+  .programs-page .hero-text p {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+
+  .programs-page .hero-image {
+    width: 100%;
+
+    margin-top: 25px;
+
+    justify-content: center;
+  }
+
+
+  .programs-page .hero-image img {
+    width: min(100%, 500px);
+    max-width: 100%;
+  }
+
+
+  /* =======================================================
+     PROGRAM SECTIONS
+  ======================================================= */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+    width: calc(100% - 36px);
+    max-width: 650px;
+
+    margin: 45px auto 0;
+
+    padding: 0;
+  }
+
+
+  .programs-page .program-list {
+    width: 100%;
+
+    gap: 24px;
+  }
+
+
+  /* =======================================================
+     MOBILE CARD
+     IMAGE TOP
+     TEXT BOTTOM
+  ======================================================= */
+
+  .programs-page .program-card,
+  .programs-page .program-card.left,
+  .programs-page .program-card.right {
+
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    min-height: 0;
+    height: auto;
+    max-height: none;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 20px;
+
+    padding: 28px 18px 24px;
+
+    text-align: center;
+
+    overflow: visible;
+  }
+
+
+  /* =======================================================
+     FORCE IMAGE TO TOP FOR BOTH LEFT + RIGHT CARDS
+  ======================================================= */
+
+  .programs-page .program-card .program-image-box,
+  .programs-page .program-card.left .program-image-box,
+  .programs-page .program-card.right .program-image-box {
+
+    order: 1;
+
+    width: 175px;
+    min-width: 175px;
+
+    height: 175px;
+
+    flex-shrink: 0;
+
+    margin: 0 auto;
+  }
+
+
+  /* =======================================================
+     FORCE TEXT TO BOTTOM
+  ======================================================= */
+
+  .programs-page .program-card .program-description,
+  .programs-page .program-card.left .program-description,
+  .programs-page .program-card.right .program-description {
+
+    order: 2;
+
+    width: 100%;
+    max-width: 520px;
+
+    min-width: 0;
+
+    flex: none;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* =======================================================
+     IMAGE CONTENT
+  ======================================================= */
+
+  .programs-page .program-image-box img {
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 3px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+
+  .programs-page .program-image-box strong {
+    font-size: 8px;
+  }
+
+
+  .programs-page .program-image-box p {
+    max-width: 125px;
+
+    margin-top: 6px;
+
+    font-size: 7px;
+    line-height: 1.2;
+  }
+
+
+  /* =======================================================
+     DECORATIONS
+     ALLOW THEM TO STAY OUTSIDE CARD
+  ======================================================= */
+
+  .programs-page .program-decoration {
+    z-index: 20;
+
+    display: block;
+
+    visibility: visible;
+    opacity: 1;
+
+    pointer-events: none;
+  }
+
+
+  .programs-page .decoration-sun {
+    width: 48px;
+    height: 48px;
+
+    right: -18px;
+    top: -25px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 58px;
+    height: 45px;
+
+    left: -12px;
+    top: -22px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 48px;
+    height: 48px;
+
+    right: -12px;
+    top: -22px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 60px;
+    height: 46px;
+
+    left: -14px;
+    top: -25px;
+  }
+
+
+  /* =======================================================
+     SPECIAL TITLE
+  ======================================================= */
+
+  .programs-page .special-programs {
+    margin-top: 55px;
+  }
+
+
+  .programs-page .special-programs h2 {
+    width: 100%;
+
+    margin: 0 0 28px;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .programs-page .benefits-section {
+    margin-top: 30px;
+
+    padding: 0 20px 60px;
+  }
+
+
+  .programs-page .benefits-section h2 {
+    margin-bottom: 35px;
+
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+
+  .programs-page .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 40px 25px;
+  }
+
+
+  .programs-page .benefit-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .programs-page .benefit-item h3 {
+    font-size: 15px;
+  }
+
+
+  .programs-page .benefit-item p {
+    max-width: 250px;
+
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+
+  /* =======================================================
+     CTA
+  ======================================================= */
+
+  .programs-page .admission-section {
+    width: 100%;
+    height: auto;
+    min-height: 720px;
+
+    padding: 35px 20px 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #fff0c5;
+
+    overflow: hidden;
+  }
+
+
+  .programs-page .admission-image-wrapper {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .programs-page .admission-image {
+    width: min(90%, 380px);
+    max-width: 100%;
+  }
+
+
+  .programs-page .admission-content {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+
+  .programs-page .admission-title {
+    margin: 0;
+
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+
+    white-space: normal;
+  }
+
+
+  .programs-page .admission-description {
+    margin: 22px auto 0;
+
+    max-width: 600px;
+
+    font-size: 21px;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+
+  .programs-page .admission-button {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: min(85%, 330px);
+    height: 68px;
+
+    margin-top: 35px;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+  }
+
+
+  .programs-page .admission-button:hover {
+    transform: translateY(-3px);
+  }
+
+
+  .programs-page .admission-button:active {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   BELOW 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .programs-page .programs-hero {
+    padding: 20px 15px 0;
+  }
+
+
+  .programs-page .hero-text h1 {
+    font-size: 32px;
+  }
+
+
+  .programs-page .hero-text p {
+    max-width: 430px;
+
+    font-size: 15px;
+  }
+
+
+  .programs-page .hero-image {
+    margin-top: 20px;
+  }
+
+
+  /* PROGRAM SECTIONS */
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+
+    width: calc(100% - 24px);
+
+    margin-top: 35px;
+  }
+
+
+  .programs-page .program-list {
+    gap: 22px;
+  }
+
+
+  /* MOBILE CARD */
+
+  .programs-page .program-card,
+  .programs-page .program-card.left,
+  .programs-page .program-card.right {
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 28px 15px 22px;
+
+    border-radius: 12px;
+
+    gap: 18px;
+
+    overflow: visible;
+  }
+
+
+  /* IMAGE TOP */
+
+  .programs-page .program-card .program-image-box,
+  .programs-page .program-card.left .program-image-box,
+  .programs-page .program-card.right .program-image-box {
+
+    order: 1;
+
+    width: 155px;
+    min-width: 155px;
+
+    height: 155px;
+  }
+
+
+  /* TEXT BOTTOM */
+
+  .programs-page .program-card .program-description,
+  .programs-page .program-card.left .program-description,
+  .programs-page .program-card.right .program-description {
+
+    order: 2;
+
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 75px;
+    height: 75px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 15px;
+  }
+
+
+  /* SPECIAL */
+
+  .programs-page .special-programs h2 {
+    margin-left: 0;
+
+    font-size: 32px;
+    text-align: center;
+  }
+
+
+  /* DECORATIONS */
+
+  .programs-page .decoration-sun {
+    width: 40px;
+    height: 40px;
+
+    right: -8px;
+    top: -19px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 50px;
+    height: 38px;
+
+    left: -8px;
+    top: -18px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 40px;
+    height: 40px;
+
+    right: -8px;
+    top: -18px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 52px;
+    height: 40px;
+
+    left: -10px;
+    top: -21px;
+  }
+
+
+  /* BENEFITS */
+
+  .programs-page .benefits-section {
+    padding: 0 15px 50px;
+  }
+
+
+  .programs-page .benefits-section h2 {
+    font-size: 22px;
+  }
+
+
+  .programs-page .benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .programs-page .benefit-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .programs-page .benefit-item p {
+    max-width: 280px;
+
+    font-size: 14px;
+  }
+
+
+  /* CTA */
+
+  .programs-page .admission-section {
+    min-height: 650px;
+
+    padding:
+      25px
+      15px
+      75px;
+  }
+
+
+  .programs-page .admission-image {
+    width: min(85%, 300px);
+  }
+
+
+  .programs-page .admission-title {
+    font-size: 29px;
+  }
+
+
+  .programs-page .admission-description {
+    margin-top: 18px;
+
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+
+  .programs-page .admission-button {
+    width: min(80%, 250px);
+    height: 58px;
+
+    margin-top: 28px;
+
+    border-radius: 13px;
+
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   BELOW 450px
+========================================================= */
+
+@media (max-width: 449px) {
+
+  .programs-page .programs-hero {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .programs-page .hero-text h1 {
+    font-size: 28px;
+  }
+
+
+  .programs-page .hero-text p {
+    font-size: 14px;
+  }
+
+
+  .programs-page .regular-programs,
+  .programs-page .special-programs {
+
+    width: calc(100% - 20px);
+  }
+
+
+  /* CARD */
+
+  .programs-page .program-card,
+  .programs-page .program-card.left,
+  .programs-page .program-card.right {
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 25px 12px 20px;
+
+    gap: 16px;
+
+    overflow: visible;
+  }
+
+
+  /* IMAGE TOP */
+
+  .programs-page .program-card .program-image-box,
+  .programs-page .program-card.left .program-image-box,
+  .programs-page .program-card.right .program-image-box {
+
+    order: 1;
+
+    width: 140px;
+    min-width: 140px;
+
+    height: 140px;
+  }
+
+
+  /* TEXT BOTTOM */
+
+  .programs-page .program-card .program-description,
+  .programs-page .program-card.left .program-description,
+  .programs-page .program-card.right .program-description {
+
+    order: 2;
+
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 68px;
+    height: 68px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 14px;
+  }
+
+
+  .programs-page .program-image-box strong {
+    font-size: 7px;
+  }
+
+
+  .programs-page .program-image-box p {
+    font-size: 6px;
+  }
+
+
+  /* SPECIAL */
+
+  .programs-page .special-programs h2 {
+    margin-left: 0;
+
+    font-size: 28px;
+    text-align: center;
+  }
+
+
+  /* DECORATIONS */
+
+  .programs-page .decoration-sun {
+    width: 36px;
+    height: 36px;
+
+    right: -5px;
+    top: -17px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 45px;
+    height: 35px;
+
+    left: -5px;
+    top: -16px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 36px;
+    height: 36px;
+
+    right: -5px;
+    top: -17px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 47px;
+    height: 37px;
+
+    left: -6px;
+    top: -19px;
+  }
+
+
+  /* BENEFITS */
+
+  .programs-page .benefits-section h2 {
+    font-size: 20px;
+  }
+
+
+  /* CTA */
+
+  .programs-page .admission-section {
+    min-height: 500px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #fff0c5 0,
+        #fff0c5 450px,
+        #ffffff 450px,
+        #ffffff 100%
+      );
+
+    padding:
+      20px
+      12px
+      65px;
+  }
+
+
+  .programs-page .admission-image {
+    width: min(82%, 250px);
+  }
+
+
+  .programs-page .admission-title {
+    font-size: 25px;
+  }
+
+
+  .programs-page .admission-description {
+    font-size: 16px;
+  }
+
+
+  .programs-page .admission-button {
+    width: min(78%, 210px);
+    height: 52px;
+
+    margin-top: 95px;
+
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   BELOW 349px
+========================================================= */
+
+@media (max-width: 349px) {
+
+  .programs-page .hero-text h1 {
+    font-size: 25px;
+  }
+
+
+  .programs-page .hero-text p {
+    font-size: 13px;
+  }
+
+
+  /* CARD */
+
+  .programs-page .program-card,
+  .programs-page .program-card.left,
+  .programs-page .program-card.right {
+
+    padding: 22px 10px 18px;
+
+    gap: 14px;
+
+    overflow: visible;
+  }
+
+
+  .programs-page .program-card .program-image-box,
+  .programs-page .program-card.left .program-image-box,
+  .programs-page .program-card.right .program-image-box {
+
+    order: 1;
+
+    width: 125px;
+    min-width: 125px;
+
+    height: 125px;
+  }
+
+
+  .programs-page .program-card .program-description,
+  .programs-page .program-card.left .program-description,
+  .programs-page .program-card.right .program-description {
+
+    order: 2;
+
+    width: 100%;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+
+  .programs-page .program-image-box img {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  .programs-page .program-image-box h3 {
+    font-size: 13px;
+  }
+
+
+  .programs-page .program-image-box strong {
+    font-size: 7px;
+  }
+
+
+  .programs-page .program-image-box p {
+    font-size: 6px;
+  }
+
+
+  /* SPECIAL TITLE */
+
+  .programs-page .special-programs h2 {
+    font-size: 25px;
+  }
+
+
+  /* DECORATIONS */
+
+  .programs-page .decoration-sun {
+    width: 32px;
+    height: 32px;
+
+    right: -4px;
+    top: -15px;
+  }
+
+
+  .programs-page .decoration-cloud {
+    width: 40px;
+    height: 31px;
+
+    left: -4px;
+    top: -14px;
+  }
+
+
+  .programs-page .decoration-flower {
+    width: 32px;
+    height: 32px;
+
+    right: -4px;
+    top: -15px;
+  }
+
+
+  .programs-page .decoration-bee {
+    width: 42px;
+    height: 33px;
+
+    left: -5px;
+    top: -17px;
+  }
+
+
+  /* BENEFITS */
+
+  .programs-page .benefits-section h2 {
+    font-size: 18px;
+  }
+
+
+  /* CTA */
+
+  .programs-page .admission-section {
+    min-height: 560px;
+  }
+
+
+  .programs-page .admission-image {
+    width: min(80%, 220px);
+  }
+
+
+  .programs-page .admission-title {
+    font-size: 22px;
+  }
+
+
+  .programs-page .admission-description {
+    font-size: 15px;
+  }
+
+
+  .programs-page .admission-button {
+    width: 175px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+}
+
+
+

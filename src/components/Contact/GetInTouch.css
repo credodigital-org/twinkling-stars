@@ -1,0 +1,1427 @@
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section,
+.contact-section * {
+  box-sizing: border-box;
+}
+
+.contact-section {
+  width: 100%;
+
+  padding: 25px 35px 50px;
+
+  background: #ffffff;
+
+  font-family: Poppins, sans-serif;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTACT CARD
+========================================================= */
+
+.contact-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 1010px;
+
+  min-height: 800px;
+
+  margin: 0 auto;
+
+  padding: 25px 55px 45px;
+
+  background: #d9f5f3;
+
+  border-radius: 38px;
+}
+
+
+/* =========================================================
+   DISCOUNT BANNER
+========================================================= */
+
+.discount-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+
+.discount-banner {
+  width: 590px;
+  max-width: 70%;
+
+  min-height: 66px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 25px;
+
+  border: 1px solid #c8dddd;
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #0564c7;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 39px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   BEE
+========================================================= */
+
+.discount-bee {
+  position: absolute;
+
+  width: 92px;
+  height: auto;
+
+  left: calc(50% - 330px);
+
+  top: -25px;
+
+  z-index: 5;
+
+  object-fit: contain;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  column-gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   LEFT CONTACT INFORMATION
+========================================================= */
+
+.contact-info {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+.contact-info h2 {
+  margin: 25px 0 25px;
+
+  color: #111111;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 50px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   EMAIL / PHONE
+========================================================= */
+
+.contact-email,
+.contact-phone {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 5px;
+
+  white-space: nowrap;
+}
+
+
+.contact-phone {
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.contact-address {
+  margin-top: 55px;
+}
+
+
+.contact-address h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  letter-spacing: 6px;
+}
+
+
+.contact-address p {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 18px;
+
+  line-height: 1.45;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   WORKING HOURS
+========================================================= */
+
+.working-hours {
+  margin-top: 118px;
+
+  padding-left: 8px;
+}
+
+
+.working-hours h3 {
+  display: inline-block;
+  margin: 0 0 12px;
+
+  color: #ff1717;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #63b846;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+
+.working-hours ul {
+  margin: 0;
+
+  padding-left: 18px;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+
+.working-hours li {
+  padding-left: 2px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+  width: 100%;
+
+  min-width: 0;
+
+  padding-top: 28px;
+}
+
+
+.form-group {
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  display: block;
+
+  margin: 0 0 10px 10px;
+
+  color: #111111;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  display: block;
+
+  border: 1px solid #599d9a;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  outline: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  color: #111111;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.form-group input {
+  height: 62px;
+
+  padding: 10px 15px;
+}
+
+
+.form-group textarea {
+  height: 225px;
+
+  padding: 15px;
+
+  resize: none;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1678d2;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 120, 210, 0.12);
+}
+
+.send-button {
+  display: block;
+
+  width: 260px;
+  height: 65px;
+
+  margin: 30px auto 0;
+
+  border: none;
+  border-radius: 35px;
+
+  background: #279c04;
+  color: #ffffff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.send-button:hover {
+  background: #208003;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(39, 156, 4, 0.25);
+}
+
+
+/* =========================================================
+   FLOATING CONTACT BUTTONS
+   FULL RESPONSIVE
+========================================================= */
+
+.call-button,
+.whatsapp-button {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #279c04;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  z-index: 20;
+
+  box-shadow: 0 5px 15px rgba(39, 156, 4, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.call-button {
+  right: 175px;
+  bottom: 25px;
+
+  width: 68px;
+  height: 68px;
+}
+
+.call-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #279c04;
+
+  font-size: 32px;
+  line-height: 1;
+}
+
+.call-button img {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.whatsapp-button {
+  right: 80px;
+  bottom: 25px;
+
+  width: 68px;
+  height: 68px;
+}
+
+.whatsapp-button img {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.call-button:hover,
+.whatsapp-button:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 6px 18px rgba(39, 156, 4, 0.30);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   <= 1600px
+========================================================= */
+
+@media (max-width: 1600px) {
+
+  .contact-card {
+    max-width: 1100px;
+
+    min-height: 790px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .contact-content {
+    column-gap: 55px;
+  }
+
+  .contact-info h2 {
+    font-size: 47px;
+  }
+
+  .contact-email,
+  .contact-phone {
+    font-size: 22px;
+  }
+
+  .discount-banner {
+    font-size: 36px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 72px;
+    height: 72px;
+
+    bottom: 30px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 185px;
+  }
+
+  .whatsapp-button {
+    right: 85px;
+  }
+
+  .call-button span {
+    font-size: 34px;
+  }
+
+  .call-button img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-button img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   <= 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .contact-section {
+    padding: 25px 25px 45px;
+  }
+
+  .contact-card {
+    max-width: 1000px;
+
+    min-height: 730px;
+
+    padding: 22px 45px 40px;
+
+    border-radius: 32px;
+  }
+
+  .discount-banner {
+    width: 550px;
+
+    min-height: 60px;
+
+    font-size: 31px;
+  }
+
+  .discount-bee {
+    width: 78px;
+
+    left: calc(50% - 300px);
+
+    top: -20px;
+  }
+
+  .contact-content {
+    column-gap: 45px;
+  }
+
+  .contact-info h2 {
+    font-size: 43px;
+
+    margin-top: 22px;
+  }
+
+  .contact-email,
+  .contact-phone {
+    font-size: 19px;
+
+    letter-spacing: 4px;
+  }
+
+  .contact-address {
+    margin-top: 45px;
+  }
+
+  .contact-address h3 {
+    font-size: 24px;
+  }
+
+  .contact-address p {
+    font-size: 16px;
+  }
+
+  .working-hours {
+    margin-top: 85px;
+  }
+
+  .working-hours h3 {
+    font-size: 21px;
+  }
+
+  .working-hours ul {
+    font-size: 19px;
+  }
+
+  .contact-form {
+    padding-top: 24px;
+  }
+
+  .form-group label {
+    font-size: 22px;
+  }
+
+  .form-group input {
+    height: 58px;
+  }
+
+  .form-group textarea {
+    height: 190px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 68px;
+    height: 68px;
+
+    bottom: 25px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 175px;
+  }
+
+  .whatsapp-button {
+    right: 80px;
+  }
+
+  .call-button span {
+    font-size: 32px;
+  }
+
+  .call-button img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-button img {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   <= 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .contact-section {
+    padding: 25px 20px 40px;
+  }
+
+  .contact-card {
+    max-width: 900px;
+
+    min-height: auto;
+
+    padding: 22px 35px 80px;
+
+    border-radius: 30px;
+  }
+
+  .discount-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .discount-banner {
+    width: 480px;
+
+    max-width: 72%;
+
+    min-height: 55px;
+
+    font-size: 27px;
+  }
+
+  .discount-bee {
+    width: 70px;
+
+    left: calc(50% - 260px);
+
+    top: -15px;
+  }
+
+  .contact-content {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    column-gap: 35px;
+  }
+
+  .contact-info h2 {
+    font-size: 37px;
+
+    letter-spacing: 1px;
+
+    margin-top: 20px;
+  }
+
+  .contact-email,
+  .contact-phone {
+    font-size: 16px;
+
+    letter-spacing: 3px;
+  }
+
+  .contact-phone {
+    margin-top: 18px;
+  }
+
+  .contact-address {
+    margin-top: 38px;
+  }
+
+  .contact-address h3 {
+    font-size: 21px;
+
+    letter-spacing: 4px;
+  }
+
+  .contact-address p {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+  }
+
+  .working-hours {
+    margin-top: 65px;
+
+    padding-left: 5px;
+  }
+
+  .working-hours h3 {
+    font-size: 19px;
+  }
+
+  .working-hours ul {
+    font-size: 17px;
+  }
+
+  .form-group {
+    margin-bottom: 17px;
+  }
+
+  .form-group label {
+    margin-left: 7px;
+
+    font-size: 20px;
+  }
+
+  .form-group input {
+    height: 55px;
+
+    border-radius: 13px;
+  }
+
+  .form-group textarea {
+    height: 170px;
+
+    border-radius: 13px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    width: 62px;
+    height: 62px;
+
+    bottom: 20px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 115px;
+  }
+
+  .whatsapp-button {
+    right: 30px;
+  }
+
+  .call-button span {
+    font-size: 29px;
+  }
+
+  .call-button img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-button img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 18px 12px 35px;
+  }
+
+  .contact-card {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 20px 22px 85px;
+
+    border-radius: 25px;
+  }
+
+
+  /* DISCOUNT */
+
+  .discount-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .discount-banner {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-height: 52px;
+
+    padding: 5px 15px 5px 50px;
+
+    font-size: clamp(20px, 5vw, 28px);
+
+    line-height: 1.2;
+
+    white-space: normal;
+
+    text-align: center;
+  }
+
+  .discount-bee {
+    width: 62px;
+
+    left: 5px;
+
+    top: -17px;
+  }
+
+
+  /* CONTENT */
+
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  /* LEFT */
+
+  .contact-info {
+    text-align: left;
+  }
+
+  .contact-info h2 {
+    margin: 5px 0 25px;
+
+    font-size: clamp(35px, 9vw, 48px);
+
+    letter-spacing: 1px;
+  }
+
+  .contact-email,
+  .contact-phone {
+    font-size: clamp(15px, 4vw, 20px);
+
+    letter-spacing: 2.5px;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+  }
+
+  .contact-phone {
+    margin-top: 18px;
+  }
+
+
+  /* ADDRESS */
+
+  .contact-address {
+    margin-top: 35px;
+  }
+
+  .contact-address h3 {
+    font-size: 22px;
+
+    letter-spacing: 4px;
+  }
+
+  .contact-address p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* HOURS */
+
+  .working-hours {
+    margin-top: 45px;
+
+    padding-left: 3px;
+  }
+
+  .working-hours h3 {
+    font-size: 21px;
+  }
+
+  .working-hours ul {
+    font-size: 18px;
+
+    line-height: 1.4;
+  }
+
+
+  /* FORM */
+
+  .contact-form {
+    padding-top: 0;
+  }
+
+  .form-group {
+    margin-bottom: 22px;
+  }
+
+  .form-group label {
+    margin-left: 5px;
+
+    margin-bottom: 9px;
+
+    font-size: 21px;
+  }
+
+  .form-group input {
+    height: 58px;
+
+    border-radius: 13px;
+  }
+
+  .form-group textarea {
+    height: 190px;
+
+    border-radius: 13px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 60px;
+    height: 60px;
+
+    bottom: 20px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 105px;
+  }
+
+  .whatsapp-button {
+    right: 25px;
+  }
+
+  .call-button span {
+    font-size: 28px;
+  }
+
+  .call-button img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .whatsapp-button img {
+    width: 47px;
+    height: 47px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   601px - 768px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+  .call-button,
+  .whatsapp-button {
+    width: 56px;
+    height: 56px;
+
+    bottom: 18px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 90px;
+  }
+
+  .whatsapp-button {
+    right: 18px;
+  }
+
+  .call-button span {
+    font-size: 26px;
+  }
+
+  .call-button img {
+    width: 41px;
+    height: 41px;
+  }
+
+  .whatsapp-button img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 12px 10px 30px;
+  }
+
+  .contact-card {
+    padding: 18px 17px 82px;
+
+    border-radius: 22px;
+  }
+
+
+  /* DISCOUNT */
+
+  .discount-banner {
+    min-height: 48px;
+
+    padding-left: 42px;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+  }
+
+  .discount-bee {
+    width: 53px;
+
+    left: 0;
+
+    top: -13px;
+  }
+
+
+  /* TITLE */
+
+  .contact-info h2 {
+    font-size: 34px;
+
+    margin-bottom: 22px;
+  }
+
+
+  /* TEXT */
+
+  .contact-email,
+  .contact-phone {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.6;
+  }
+
+
+  /* ADDRESS */
+
+  .contact-address {
+    margin-top: 30px;
+  }
+
+  .contact-address h3 {
+    font-size: 19px;
+
+    letter-spacing: 3px;
+  }
+
+  .contact-address p {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.6;
+  }
+
+
+  /* HOURS */
+
+  .working-hours {
+    margin-top: 38px;
+  }
+
+  .working-hours h3 {
+    font-size: 19px;
+  }
+
+  .working-hours ul {
+    font-size: 16px;
+
+    padding-left: 18px;
+  }
+
+
+  /* FORM */
+
+  .form-group label {
+    font-size: 19px;
+  }
+
+  .form-group input {
+    height: 53px;
+  }
+
+  .form-group textarea {
+    height: 170px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 54px;
+    height: 54px;
+
+    bottom: 17px;
+
+    border-width: 3px;
+  }
+
+  .call-button {
+    right: 82px;
+  }
+
+  .whatsapp-button {
+    right: 15px;
+  }
+
+  .call-button span {
+    font-size: 25px;
+  }
+
+  .call-button img {
+    width: 39px;
+    height: 39px;
+  }
+
+  .whatsapp-button img {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .contact-section {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .contact-card {
+    padding: 16px 13px 78px;
+
+    border-radius: 20px;
+  }
+
+
+  /* DISCOUNT */
+
+  .discount-banner {
+    min-height: 44px;
+
+    padding-left: 38px;
+
+    font-size: 17px;
+  }
+
+  .discount-bee {
+    width: 46px;
+
+    top: -10px;
+  }
+
+
+  /* TITLE */
+
+  .contact-info h2 {
+    font-size: 30px;
+
+    letter-spacing: 0;
+  }
+
+
+  /* TEXT */
+
+  .contact-email,
+  .contact-phone {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* ADDRESS */
+
+  .contact-address h3 {
+    font-size: 17px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .contact-address p {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* HOURS */
+
+  .working-hours h3 {
+    font-size: 17px;
+  }
+
+  .working-hours ul {
+    font-size: 14px;
+  }
+
+
+  /* FORM */
+
+  .form-group label {
+    font-size: 17px;
+  }
+
+  .form-group input {
+    height: 50px;
+
+    border-radius: 11px;
+  }
+
+  .form-group textarea {
+    height: 150px;
+
+    border-radius: 11px;
+  }
+
+
+  .call-button,
+  .whatsapp-button {
+    width: 48px;
+    height: 48px;
+
+    bottom: 13px;
+
+    border-width: 2.5px;
+  }
+
+  .call-button {
+    right: 65px;
+  }
+
+  .whatsapp-button {
+    right: 12px;
+  }
+
+  .call-button span {
+    font-size: 21px;
+  }
+
+  .call-button img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .whatsapp-button img {
+    width: 38px;
+    height: 38px;
+  }
+}
+/* =========================================================
+   EXTRA SMALL
+   <= 320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .call-button,
+  .whatsapp-button {
+    width: 44px;
+    height: 44px;
+
+    bottom: 11px;
+
+    border-width: 2px;
+  }
+
+  .call-button {
+    right: 58px;
+  }
+
+  .whatsapp-button {
+    right: 10px;
+  }
+
+  .call-button span {
+    font-size: 19px;
+  }
+
+  .call-button img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .whatsapp-button img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .whatsapp-button,
+  .form-group input,
+  .form-group textarea {
+    transition: none;
+  }
+  .call-button,
+  .whatsapp-button {
+    transition: none;
+  }
+}
+.call-button:focus-visible,
+.whatsapp-button:focus-visible {
+  outline: 2px solid #279c04;
+  outline-offset: 3px;
+}

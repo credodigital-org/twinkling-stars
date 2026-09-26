@@ -1,0 +1,288 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Nunito", sans-serif;
+
+  background: #ffffff;
+  color: #111111;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   GLOBAL SCROLL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(70px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   LEFT REVEAL
+========================================================= */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-80px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   RIGHT REVEAL
+========================================================= */
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(80px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   SCALE REVEAL
+========================================================= */
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.82);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   STAGGER ANIMATION
+========================================================= */
+
+.stagger > * {
+  opacity: 0;
+  transform: translateY(55px) scale(0.96);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger.show > * {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stagger.show > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.stagger.show > *:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.stagger.show > *:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.stagger.show > *:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.stagger.show > *:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.stagger.show > *:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+.stagger.show > *:nth-child(7) {
+  transition-delay: 0.65s;
+}
+
+.stagger.show > *:nth-child(8) {
+  transition-delay: 0.75s;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.animated-card {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.animated-image {
+  transition:
+    transform 0.55s ease,
+    filter 0.55s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.animated-button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.animated-button:hover {
+  transform: translateY(-5px) scale(1.025);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.animated-button:active {
+  transform: translateY(0) scale(0.96);
+}
+
+
+/* =========================================================
+   FLOATING
+========================================================= */
+
+.float {
+  animation: globalFloat 4s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: globalFloatSlow 6s ease-in-out infinite;
+}
+
+@keyframes globalFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes globalFloatSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

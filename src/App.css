@@ -1,0 +1,817 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   APP MAIN WRAPPER
+========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   ALL SECTIONS
+========================================================= */
+
+section {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* =========================================================
+   HERO / NAVBAR SAFETY
+========================================================= */
+
+.hero-section,
+.navbar,
+.site-header {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE CONTAINER
+========================================================= */
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+/* =========================================================
+   FLOATING CONTACT WIDGET
+========================================================= */
+
+.floating-contact-widget {
+  position: fixed;
+
+  right: 35px;
+  bottom: 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 22px;
+
+  z-index: 9999;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.contact-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 2px solid #000000;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.contact-btn img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CALL
+========================================================= */
+
+.call-btn {
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-btn {
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.contact-btn:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .floating-contact-widget {
+    right: 15px;
+    bottom: 18px;
+
+    gap: 9px;
+  }
+
+  .contact-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .floating-contact-widget {
+    right: 12px;
+    bottom: 15px;
+  }
+
+  .contact-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   GLOBAL ANIMATION SYSTEM
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   REVEAL FROM LEFT
+========================================================= */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   REVEAL FROM RIGHT
+========================================================= */
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   SCALE REVEAL
+========================================================= */
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal-scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   STAGGER ANIMATION
+========================================================= */
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.stagger-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-item:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.stagger-item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.stagger-item:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.stagger-item:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.stagger-item:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+
+/* =========================================================
+   BUTTON ANIMATION
+========================================================= */
+
+button,
+a {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+button:hover,
+a:hover {
+  transition-duration: 0.25s;
+}
+
+
+/* =========================================================
+   BUTTON PRESS
+========================================================= */
+
+button:active,
+a:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.animated-image {
+  overflow: hidden;
+}
+
+.animated-image img {
+  transition:
+    transform 0.6s ease;
+}
+
+.animated-image:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   PROGRAM CARD
+========================================================= */
+
+.program-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   GALLERY IMAGE
+========================================================= */
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   LOGO FLOAT
+========================================================= */
+
+.footer-logo img {
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* =========================================================
+   HERO FLOATING OBJECTS
+========================================================= */
+
+.hero-image img {
+  animation: childFloat 4s ease-in-out infinite;
+}
+
+@keyframes childFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+/* =========================================================
+   DECORATIVE CLOUD
+========================================================= */
+
+.hero-cloud {
+  animation: cloudMove 7s ease-in-out infinite;
+}
+
+@keyframes cloudMove {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(18px);
+  }
+}
+
+
+/* =========================================================
+   SUN
+========================================================= */
+
+.hero-sun {
+  animation: sunFloat 5s ease-in-out infinite;
+}
+
+@keyframes sunFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   BEE
+========================================================= */
+
+.hero-bee {
+  animation: beeFly 3.5s ease-in-out infinite;
+}
+
+@keyframes beeFly {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(8px, -8px) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(15px, 0) rotate(-3deg);
+  }
+
+  75% {
+    transform: translate(7px, 8px) rotate(2deg);
+  }
+}
+
+
+/* =========================================================
+   FLOWER
+========================================================= */
+
+.hero-flower {
+  animation: flowerSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes flowerSway {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   FLOATING CONTACT BUTTONS
+========================================================= */
+
+.contact-btn {
+  animation: contactFloat 3s ease-in-out infinite;
+}
+
+.whatsapp-btn {
+  animation-delay: 0.4s;
+}
+
+@keyframes contactFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.contact-btn:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   WHATSAPP PULSE
+========================================================= */
+
+.whatsapp-btn {
+  position: relative;
+}
+
+.whatsapp-btn::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -4px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(0, 0, 0, 0.15);
+
+  animation: whatsappPulse 2s ease-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes whatsappPulse {
+
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-header {
+  animation: navbarDrop 0.7s ease both;
+}
+
+@keyframes navbarDrop {
+
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   FOOTER REVEAL
+========================================================= */
+
+.site-footer {
+  animation: footerReveal 0.9s ease both;
+}
+
+@keyframes footerReveal {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
