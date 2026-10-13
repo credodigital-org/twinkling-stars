@@ -1,4 +1,5 @@
 
+import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import "./Programs.css";
 
@@ -8,6 +9,8 @@ import programKg from "../../assets/images/kg.png";
 import programAfterSchool from "../../assets/images/after-school.png";
 
 function RegularPrograms() {
+  const navigate = useNavigate();
+
   const viewportRef = useRef(null);
 
   const slideLeft = () => {
@@ -166,6 +169,7 @@ function RegularPrograms() {
                     style={{
                       color: program.actionColor,
                     }}
+                    onClick={() => navigate("/programs#regular-programs")}
                   >
                     <span>LEARN MORE</span>
                     <span className="learn-more-arrow">→</span>

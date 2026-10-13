@@ -9,7 +9,7 @@ import Contact from "../components/Contact/GetInTouch";
 
 
 import aboutImage from "../assets/images/about.png";
-import flowerImage from "../assets/images/flower.png";
+import flowerImage from "../assets/images/stars.png";
 
 import useScrollReveal from "../hooks/useScrollReveal";
 

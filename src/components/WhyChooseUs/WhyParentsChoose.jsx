@@ -19,7 +19,7 @@ const reasons = [
   },
   {
     image: interaction,
-    text: "Every Day Interaction With Teacher And Kid.",
+    text: "Daily interaction with Teacher and child.",
   },
   {
     image: siblings,
@@ -27,11 +27,11 @@ const reasons = [
   },
   {
     image: pickDrop,
-    text: "Pick And Drop Available.",
+    text: "Pick - up & Drop - off services are available.",
   },
   {
     image: transport,
-    text: "Transportation Service Available In Abu Dhabi In City.",
+    text: "Transportation Service Available In Abu Dhabi City.",
   },
 ];
 

@@ -3,7 +3,7 @@ import "./GetInTouch.css";
 
 import whatsappIcon from "../../assets/images/whatsapp.png";
 import callicon from "../../assets/images/call.png";
-import bee from "../../assets/images/bee.png";
+import bee from "../../assets/images/stars.png";
 
 function ContactSection() {
 
@@ -75,11 +75,11 @@ ${enquiry}
             </h2>
 
             <p className="contact-email">
-              E-MAIL: twinklingstars@gmail.com
+              E-MAIL: twinklingstarsdaycare4you@gmail.com
             </p>
 
             <p className="contact-phone">
-              PHONE: +971564740473
+              PHONE: +971541412448
             </p>
 
 
@@ -112,7 +112,7 @@ ${enquiry}
 
               <ul>
                 <li>Monday - Sunday</li>
-                <li>6:30 Am - 7:30 Pm</li>
+                <li>6:30 Am - 8:30 Pm</li>
               </ul>
 
             </div>
@@ -201,7 +201,7 @@ ${enquiry}
         {/* CALL BUTTON */}
 
         <a
-          href="tel:+971564740473"
+          href="tel:+971541412448"
           className="call-button"
           aria-label="Call us"
         >
@@ -215,7 +215,7 @@ ${enquiry}
         {/* WHATSAPP */}
 
         <a
-          href="https://wa.me/971564740473"
+          href="https://wa.me/+971541412448"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-button"

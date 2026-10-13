@@ -465,11 +465,7 @@
 
   color: #000000;
 
-  font-family:
-    "Poppins",
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: "Poppins", sans-serif;
 
   font-size: 25px;
 
@@ -1298,4 +1294,404 @@
   transform: scale(1.12);
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+/* =========================================================
+   SPECIAL PROGRAMS — UPDATED CARD DIMENSIONS
+   Based on the reference image
+========================================================= */
+
+/* Desktop: 1200px and above */
+.special-programs-track .special-program-card {
+  flex: 0 0 360px;
+  width: 360px;
+  height: 460px;
+
+  border-radius: 12px;
+  background: #faffb6;
+}
+
+/* Animal illustration: approximately 13–15% smaller */
+.special-program-card .special-program-icon {
+  width: 160px;
+  height: 165px;
+
+  margin-top: 38px;
+  flex-shrink: 0;
+}
+
+.special-program-card .special-program-icon img {
+  width: 145px;
+  height: 165px;
+
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Card title */
+.special-program-card h3 {
+  margin-top: 30px;
+  padding: 0 12px;
+
+  font-size: 27px;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+/* Card description */
+.special-program-card p {
+  margin: 20px 14px 0;
+
+  font-size: 19px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Laptop: 1024px–1199px */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .special-programs-track .special-program-card {
+    flex-basis: 350px;
+    width: 350px;
+    height: 455px;
+  }
+
+  .special-program-card .special-program-icon {
+    margin-top: 38px;
+  }
+}
+
+/* Tablet: 768px–1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .special-programs-track .special-program-card {
+    flex-basis: 335px;
+    width: 335px;
+    height: 450px;
+  }
+
+  .special-program-card .special-program-icon {
+    width: 150px;
+    height: 155px;
+    margin-top: 36px;
+  }
+
+  .special-program-card .special-program-icon img {
+    width: 135px;
+    height: 155px;
+  }
+
+  .special-program-card h3 {
+    margin-top: 29px;
+    font-size: 25px;
+  }
+
+  .special-program-card p {
+    margin-top: 19px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile: 481px–767px */
+@media (max-width: 767px) {
+  .special-programs-track .special-program-card {
+    flex: 0 0 88vw;
+    width: 88vw;
+    height: 445px;
+
+    border-radius: 12px;
+  }
+
+  .special-program-card .special-program-icon {
+    width: 140px;
+    height: 145px;
+    margin-top: 36px;
+  }
+
+  .special-program-card .special-program-icon img {
+    width: 125px;
+    height: 145px;
+  }
+
+  .special-program-card h3 {
+    margin-top: 29px;
+    font-size: 25px;
+  }
+
+  .special-program-card p {
+    margin-top: 19px;
+    font-size: 18px;
+  }
+}
+
+/* Small mobile: 361px–480px */
+@media (max-width: 480px) {
+  .special-programs-track .special-program-card {
+    flex: 0 0 calc(100vw - 35px);
+    width: calc(100vw - 35px);
+    height: 440px;
+  }
+
+  .special-program-card .special-program-icon {
+    width: 130px;
+    height: 135px;
+    margin-top: 34px;
+  }
+
+  .special-program-card .special-program-icon img {
+    width: 115px;
+    height: 135px;
+  }
+
+  .special-program-card h3 {
+    margin-top: 27px;
+    font-size: 24px;
+  }
+
+  .special-program-card p {
+    margin: 18px 12px 0;
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}
+
+/* Very small mobile: 360px and below */
+@media (max-width: 360px) {
+  .special-programs-track .special-program-card {
+    flex-basis: calc(100vw - 30px);
+    width: calc(100vw - 30px);
+    height: 440px;
+  }
+
+  .special-program-card .special-program-icon {
+    width: 120px;
+    height: 125px;
+    margin-top: 32px;
+  }
+
+  .special-program-card .special-program-icon img {
+    width: 105px;
+    height: 125px;
+  }
+
+  .special-program-card h3 {
+    margin-top: 26px;
+    font-size: 22px;
+  }
+
+  .special-program-card p {
+    margin-top: 17px;
+    font-size: 16px;
+  }
+}
+
+/* Keep existing pastel colours and rounded corners */
+.special-program-card {
+  background: #faffb6;
+  border-radius: 12px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .special-program-card,
+  .special-program-card h3,
+  .special-program-card p,
+  .special-program-card .special-program-icon img {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
+   SPECIAL PROGRAMS — ALL 4 CARDS VISIBLE ON DESKTOP
+   HIDE LEFT AND RIGHT ARROWS
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .special-programs-section {
+    width: 100%;
+    min-height: auto;
+    padding: 0 24px 75px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .special-programs-title {
+    width: 100%;
+    padding: 52px 15px 0;
+    font-size: 56px;
+    text-align: center;
+  }
+
+  .special-programs-slider {
+    width: 100%;
+    max-width: 1500px;
+    margin: 65px auto 0;
+    overflow: hidden;
+  }
+
+  /* Disable horizontal scrolling */
+  .special-programs-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+
+  /* Fit all four cards in one row */
+  .special-programs-track {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Individual cards */
+  .special-programs-track .special-program-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 460px;
+    padding: 24px 12px;
+    flex: initial;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #faffb6;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Program illustrations */
+  .special-program-card .special-program-icon {
+    width: 100%;
+    height: 155px;
+    flex: 0 0 155px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .special-program-card .special-program-icon img {
+    width: 145px;
+    height: 155px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  /* Card headings */
+  .special-program-card h3 {
+    width: 100%;
+    margin: 24px 0 0;
+    padding: 0 4px;
+
+    font-size: 23px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  /* Card descriptions */
+  .special-program-card p {
+    width: 100%;
+    margin: 18px 0 0;
+    padding: 0 4px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  /* Hide arrow buttons and their marks */
+  .special-programs-arrow,
+  .special-programs-arrow-left,
+  .special-programs-arrow-right {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* =========================================================
+   EXTRA-WIDE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .special-programs-section {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  .special-programs-slider {
+    max-width: 1600px;
+  }
+
+  .special-programs-track {
+    gap: 30px;
+  }
+
+  .special-programs-track .special-program-card {
+    height: 470px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .special-program-card h3 {
+    font-size: 25px;
+  }
+
+  .special-program-card p {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   TABLET AND MOBILE
+   PRESERVE HORIZONTAL CAROUSEL
+========================================================= */
+
+@media (max-width: 1199px) {
+
+  .special-programs-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .special-programs-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .special-programs-title,
+  .special-programs-slider,
+  .special-program-card,
+  .special-program-card h3,
+  .special-program-card p,
+  .special-program-icon img {
+    animation: none !important;
+    transition: none !important;
+  }
 }

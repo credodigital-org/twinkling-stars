@@ -30,18 +30,18 @@ const testimonials = [
       "Lorem ipsum dolor sit amet consectetur. Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus dui ultrices. Interdum sit nulla leo nisl eleifend.",
   },
   {
-    image: parent4,
+    image: parent5,
     className: "testimonial-card-4",
     imageClass: "image-small",
     text:
-      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus du. Amet mi imperdiet iasewu",
+      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus. Amet mi imperdiet iaculis lectus du lorem ipsum det fetrghwety.",
   },
   {
-    image: parent5,
+    image: parent4,
     className: "testimonial-card-5",
     imageClass: "image-square",
     text:
-      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus. Amet mi imperdiet iaculis lectus du lorem ipsum det fetrghwety.",
+      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus du. Amet mi imperdiet iasewu",
   },
 ];
 
@@ -107,12 +107,12 @@ function ParentTestimonials() {
       </div>
 
       <div className="testimonials-button-wrapper">
-        <button
+        {/* <button
           type="button"
           className="testimonials-button animated-button"
         >
           VIEW MORE
-        </button>
+        </button> */}
       </div>
     </section>
   );

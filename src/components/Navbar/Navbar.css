@@ -11,7 +11,7 @@
   position: relative;
 
   width: 100%;
-  min-height: 315px;
+  min-height: 205px;
 
   background: #ffffff;
 
@@ -22,7 +22,7 @@
   position: relative;
 
   width: 100%;
-  min-height: 315px;
+  min-height: 205px;
 
   background: #ffffff;
 }
@@ -38,7 +38,7 @@
   top: 35px;
   left: 48px;
 
-  width: 435px;
+  width: 335px;
 
   display: block;
 
@@ -196,17 +196,17 @@
 @media (min-width: 1600px) {
 
   .site-header {
-    min-height: 325px;
+    min-height: 215px;
   }
 
   .main-navbar {
-    min-height: 325px;
+    min-height: 215px;
   }
 
   .navbar-logo-link {
     top: 20px;
     left: 48px;
-    width: 325px;
+    width: 225px;
   }
 
   .navbar-menu {
@@ -240,27 +240,27 @@
 @media (min-width: 1200px) and (max-width: 1599px) {
 
   .site-header {
-    min-height: 315px;
+    min-height: 205px;
   }
 
   .main-navbar {
-    min-height: 315px;
+    min-height: 205px;
   }
 
   .navbar-logo-link {
     top: 30px;
     left: 38px;
-    width: 300px;
+    width: 200px;
   }
 
   .navbar-menu {
     top: 68px;
 
-    width: min(900px, 65vw);
+    width: min(800px, 65vw);
 
-    min-height: 70px;
+    min-height: 60px;
 
-    padding: 10px 32px;
+    padding: 5px 35px;
 
     gap: clamp(20px, 2vw, 30px);
 
@@ -268,12 +268,12 @@
   }
 
   .nav-link {
-    font-size: clamp(22px, 2.1vw, 29px);
+    font-size: clamp(22px, 2.1vw, 23px);
   }
 
   .nav-link.active {
-    min-height: 50px;
-    padding: 10px 17px;
+    min-height: 40px;
+    padding: 10px 29px;
   }
 }
 
@@ -286,17 +286,17 @@
 @media (min-width: 1025px) and (max-width: 1199px) {
 
   .site-header {
-    min-height: 285px;
+    min-height: 175px;
   }
 
   .main-navbar {
-    min-height: 285px;
+    min-height: 175px;
   }
 
   .navbar-logo-link {
     top: 25px;
     left: 28px;
-    width: 270px;
+    width: 180px;
   }
 
   .navbar-menu {
@@ -306,9 +306,9 @@
 
     min-height: 64px;
 
-    padding: 8px 24px;
+    padding: 8px 34px;
 
-    gap: clamp(15px, 1.8vw, 25px);
+    gap: clamp(25px, 1.8vw, 35px);
 
     border-radius: 30px 0 0 30px;
   }
@@ -334,17 +334,17 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .site-header {
-    min-height: 250px;
+    min-height: 140px;
   }
 
   .main-navbar {
-    min-height: 250px;
+    min-height: 140px;
   }
 
   .navbar-logo-link {
     top: 24px;
     left: 25px;
-    width: 230px;
+    width: 130px;
   }
 
   .navbar-menu {
@@ -352,11 +352,11 @@
 
     width: 68%;
 
-    min-height: 62px;
+    min-height: 42px;
 
-    padding: 8px 18px;
+    padding: 8px 28px;
 
-    gap: clamp(10px, 1.5vw, 18px);
+    gap: clamp(20px, 1.5vw, 28px);
 
     border-radius: 28px 0 0 28px;
   }
@@ -370,7 +370,7 @@
   }
 
   .nav-link.active {
-    min-height: 40px;
+    min-height: 30px;
     padding: 7px 10px;
   }
 }
@@ -429,7 +429,7 @@
     top: auto;
     left: auto;
 
-    width: 150px;
+    width: 100px;
     max-width: 45vw;
 
     margin: 0;
@@ -626,7 +626,7 @@
   }
 
   .navbar-logo-link {
-    width: 170px;
+    width: 130px;
     max-width: 38vw;
 
     margin: 0;
@@ -661,7 +661,7 @@
 @media (min-width: 361px) and (max-width: 480px) {
 
   .main-navbar {
-    padding: 8px 9px 14px;
+    padding: 8px 9px 4px;
 
     box-shadow:
       0 4px 12px rgba(0, 0, 0, 0.12),
@@ -669,7 +669,7 @@
   }
 
   .navbar-logo-link {
-    width: 85px;
+    width: 75px;
     max-width: 22vw;
 
     margin: 0;
@@ -714,7 +714,7 @@
 @media (max-width: 360px) {
 
   .main-navbar {
-    padding: 7px 7px 12px;
+    padding: 7px 7px 2px;
 
     box-shadow:
       0 4px 10px rgba(0, 0, 0, 0.12),
@@ -722,7 +722,7 @@
   }
 
   .navbar-logo-link {
-    width: 65px;
+    width: 55px;
     max-width: 20vw;
 
     margin: 0;
@@ -814,5 +814,49 @@
 
   .navbar-menu .nav-link.active {
     min-height: 37px;
+  }
+}
+
+
+
+/* =========================================================
+   FLOATING LOGO ANIMATION
+========================================================= */
+
+.navbar-logo-link {
+  animation: logoFloat 1.5s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Smooth floating up and down */
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Optional: subtle hover effect on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .navbar-logo-link:hover {
+    animation-play-state: paused;
+    transform: translateY(-5px) scale(1.03);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Keep animation comfortable for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-logo-link {
+    animation: none;
+    will-change: auto;
   }
 }
