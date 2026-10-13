@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
 import sun from "../../assets/images/sun.png";
-import bee from "../../assets/images/bee.png";
+import bee from "../../assets/images/stars.png";
 import cloud from "../../assets/images/cloud.png";
 import flower from "../../assets/images/flower.png";
 import heroChild from "../../assets/images/hero-child.png";
@@ -90,7 +90,8 @@ function Hero() {
           <h1>
             <span>Explore</span>
             <span>Learn.</span>
-            <span>Grow Together!</span>
+            <span>Grow</span>
+            <span>Together!</span>
           </h1>
 
           <p>
@@ -133,36 +134,47 @@ function Hero() {
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
           <div className="colorful-line-item">
             <span>●</span>
-            COLORFUL START FOR A BRIGHT FUTURE
+            Pre school,kg1,kg2,1st,2nd,3rd and 4th standard
           </div>
 
         </div>
 
+      </div>
+
+      <div className="golden-stars">
+        <span className="gold-star star-1">★</span>
+        <span className="gold-star star-2">★</span>
+        <span className="gold-star star-3">★</span>
+        <span className="gold-star star-4">★</span>
+        <span className="gold-star star-5">★</span>
+        <span className="gold-star star-6">★</span>
+        <span className="gold-star star-7">★</span>
+        <span className="gold-star star-8">★</span>
       </div>
 
     </section>

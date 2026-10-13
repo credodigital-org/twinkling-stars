@@ -1,20 +1,3 @@
-/* =========================================================
-   CONTACT PAGE
-   FULL RESPONSIVE VERSION
-
-   Desktop
-   Laptop
-   Tablet
-   Mobile
-   Small Mobile
-   Extra Small Mobile
-========================================================= */
-
-
-/* =========================================================
-   GOOGLE FONT
-========================================================= */
-
 @import url(
   "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
 );
@@ -344,9 +327,9 @@
 
   font-weight: 400;
 
-  line-height: 1.5;
+  line-height: 2;
 
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 
@@ -360,7 +343,7 @@
 
   text-decoration: none;
 
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 
   overflow-wrap: anywhere;
 
@@ -408,7 +391,7 @@
 
   line-height: 1.45;
 
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 
@@ -2109,5 +2092,95 @@
   .call-button,
   .whatsapp-button {
     transition: none;
+  }
+}
+
+
+/* FINAL FIX — MOBILE CONTACT CARD */
+@media (max-width: 1024px) {
+  .get-touch-page .contact-card {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 20px 16px 90px !important;
+    overflow: hidden;
+  }
+
+  .get-touch-page .discount-badge {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 24px !important;
+    white-space: normal !important;
+    font-size: 15px !important;
+  }
+
+  .get-touch-page .contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+
+  .get-touch-page .contact-info,
+  .get-touch-page .contact-form {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .get-touch-page .info-block h2 {
+    margin: 0 0 18px !important;
+    font-size: clamp(26px, 5vw, 34px) !important;
+    letter-spacing: 0 !important;
+  }
+
+  .get-touch-page .info-block p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.2px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .get-touch-page .address-block {
+    margin-top: 24px !important;
+  }
+
+  .get-touch-page .working-hours {
+    margin-top: 24px !important;
+    padding-left: 0 !important;
+  }
+
+  .get-touch-page .form-group {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  .get-touch-page .form-group input,
+  .get-touch-page .form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .get-touch-page .form-group input {
+    height: 48px !important;
+  }
+
+  .get-touch-page .form-group textarea {
+    height: 135px !important;
+  }
+
+  .get-touch-page .send-button {
+    display: block !important;
+    width: 100% !important;
+    max-width: 140px !important;
+    margin: 20px auto 0 !important;
   }
 }

@@ -12,71 +12,48 @@
   position: relative;
   width: 100%;
   min-width: 0;
-
-  padding: 55px 0 90px;
-
+  padding: 55px 0 80px;
   background: #ffffff;
-
   overflow: hidden;
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .regular-programs__container {
   position: relative;
-
   width: 100%;
   max-width: 1882px;
-
   margin: 0 auto;
-
-  overflow: hidden;
 }
 
-
 /* =========================================================
-   TITLE ANIMATION
+   SECTION TITLE
 ========================================================= */
 
 .regular-programs__title {
   margin: 0;
   padding: 0 20px;
-
   color: #df2080;
-
-  font-family: Inter, sans-serif;
-
-  font-size: 64px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 52px;
   font-weight: 700;
-  line-height: 1.05;
-
+  line-height: 1.12;
   text-align: center;
-  white-space: nowrap;
 
   opacity: 0;
-
-  animation:
-    titleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
-    0.1s forwards;
+  animation: titleReveal 0.8s ease 0.1s forwards;
 }
 
 @keyframes titleReveal {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(35px) scale(0.96);
+    transform: translateY(25px);
   }
 
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
-
 
 /* =========================================================
    CAROUSEL
@@ -84,22 +61,17 @@
 
 .regular-programs__carousel {
   position: relative;
-
   width: 100%;
-
-  margin-top: 58px;
-
+  margin-top: 48px;
   overflow: hidden;
 
-  animation:
-    carouselReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
-    0.25s both;
+  animation: carouselReveal 0.8s ease 0.2s both;
 }
 
 @keyframes carouselReveal {
   from {
     opacity: 0;
-    transform: translateY(45px);
+    transform: translateY(25px);
   }
 
   to {
@@ -108,325 +80,217 @@
   }
 }
 
-
 /* =========================================================
-   VIEWPORT
+   SCROLL VIEWPORT
 ========================================================= */
 
 .regular-programs__viewport {
   position: relative;
-
   width: 100%;
-
   overflow-x: auto;
   overflow-y: hidden;
 
   scroll-behavior: smooth;
-
+  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
 
-  scroll-snap-type: x proximity;
+  padding-top: 12px;
+  padding-bottom: 18px;
 }
 
 .regular-programs__viewport::-webkit-scrollbar {
   display: none;
 }
 
-
 /* =========================================================
-   TRACK
+   CARD TRACK
 ========================================================= */
 
 .regular-programs__track {
-  --card-width: 442px;
-  --card-gap: 54px;
+  --card-width: 360px;
+  --card-gap: 32px;
 
   display: flex;
-
   flex-wrap: nowrap;
-
+  align-items: stretch;
   gap: var(--card-gap);
 
   width: max-content;
-
-  padding-left: 45px;
-  padding-right: 45px;
-
-  will-change: scroll-position;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-
 /* =========================================================
-   CARD
+   PROGRAM CARD
+   Target: 360px wide x 460px high
 ========================================================= */
 
 .regular-programs__card {
   position: relative;
 
   flex: 0 0 var(--card-width);
-
   width: var(--card-width);
-  height: 546px;
+  height: 460px;
+  min-height: 0;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-  justify-content: flex-start;
 
-  padding: 65px 25px 28px;
+  padding: 34px 22px 24px;
 
   background: var(--card-background);
-
   border-radius: 13px;
-
   overflow: hidden;
 
   text-align: center;
-
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
   opacity: 0;
-
-  animation:
-    cardReveal
-    0.8s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    var(--animation-delay)
-    forwards;
+  animation: cardReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1)
+    var(--animation-delay) both;
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s ease;
-
-  will-change: transform;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
 
-/* =========================================================
-   CARD SHINE EFFECT
-========================================================= */
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card shine */
 
 .regular-programs__card::before {
   content: "";
-
   position: absolute;
-
   top: 0;
-  left: -120%;
-
-  width: 80%;
+  left: -130%;
+  width: 75%;
   height: 100%;
 
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
 
   transform: skewX(-18deg);
-
-  transition: left 0.8s ease;
-
+  transition: left 0.7s ease;
   pointer-events: none;
 }
 
 .regular-programs__card:hover::before {
-  left: 140%;
+  left: 150%;
 }
-
-
-/* =========================================================
-   CARD REVEAL
-========================================================= */
-
-@keyframes cardReveal {
-  0% {
-    opacity: 0;
-
-    transform:
-      translateY(70px)
-      scale(0.88)
-      rotateX(8deg);
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1)
-      rotateX(0);
-  }
-}
-
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
 
 .regular-programs__card:hover {
-  transform:
-    translateY(-14px)
-    scale(1.025);
-
-  box-shadow:
-    0 22px 45px rgba(0, 0, 0, 0.13);
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
 }
 
-
 /* =========================================================
-   IMAGE AREA
+   ANIMAL ILLUSTRATION
+   Reduced approximately 10–15%
 ========================================================= */
 
 .regular-programs__image-area {
   width: 100%;
-  height: 220px;
+  height: 175px;
+  flex: 0 0 175px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
-
-  flex-shrink: 0;
 }
-
-
-/* =========================================================
-   IMAGE
-========================================================= */
 
 .regular-programs__image {
   display: block;
 
-  width: 230px;
-  height: 210px;
-
+  width: 190px;
+  height: 175px;
   max-width: 100%;
+  max-height: 100%;
 
   object-fit: contain;
   object-position: center;
 
-  transform: translateY(0) scale(1);
+  animation: imageFloat 4s ease-in-out
+    var(--animation-delay) infinite;
 
   transition:
-    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.45s ease;
-
-  animation:
-    imageFloat 4s ease-in-out
-    var(--animation-delay)
-    infinite;
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
-
-
-/* Floating animation */
 
 @keyframes imageFloat {
   0%,
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-7px) rotate(1deg);
+    transform: translateY(-5px);
   }
 }
 
-
-/* Hover image */
-
 .regular-programs__card:hover .regular-programs__image {
-  transform:
-    translateY(-8px)
-    scale(1.08)
-    rotate(-2deg);
-
-  filter: drop-shadow(
-    0 12px 10px rgba(0, 0, 0, 0.12)
-  );
-
+  transform: scale(1.04);
+  filter: drop-shadow(0 8px 7px rgba(0, 0, 0, 0.10));
   animation-play-state: paused;
 }
 
-
 /* =========================================================
-   CARD TITLE
+   PROGRAM TITLE
 ========================================================= */
 
 .regular-programs__card-title {
   width: 100%;
-
   margin: 7px 0 0;
 
   color: #111111;
-
   font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
-
-  line-height: 1.12;
+  line-height: 1.15;
 
   text-align: center;
 
   opacity: 0;
-
-  animation:
-    contentReveal
-    0.65s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    calc(var(--animation-delay) + 0.25s)
-    forwards;
-
-  transition:
-    transform 0.35s ease;
+  animation: contentReveal 0.55s ease
+    calc(var(--animation-delay) + 0.12s) forwards;
 }
-
-.regular-programs__card:hover .regular-programs__card-title {
-  transform: translateY(-3px);
-}
-
 
 /* =========================================================
-   AGE
+   AGE RANGE
 ========================================================= */
 
 .regular-programs__age {
   width: 100%;
-
-  margin: 18px 0 0;
+  margin: 13px 0 0;
 
   color: #111111;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 25px;
+  font-size: 19px;
   font-weight: 700;
-
-  line-height: 1.2;
+  line-height: 1.25;
 
   text-align: center;
-
-  white-space: nowrap;
+  white-space: normal;
 
   opacity: 0;
-
-  animation:
-    contentReveal
-    0.65s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    calc(var(--animation-delay) + 0.35s)
-    forwards;
+  animation: contentReveal 0.55s ease
+    calc(var(--animation-delay) + 0.2s) forwards;
 }
-
 
 /* =========================================================
    DESCRIPTION
@@ -434,106 +298,26 @@
 
 .regular-programs__description {
   width: 100%;
-
-  margin: 30px 0 0;
+  margin: 20px 0 0;
 
   color: #555555;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
 
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 25px;
-  font-weight: 500;
-
-  line-height: 1.18;
+  font-family: "Poppins", sans-serif;
 
   text-align: center;
 
   opacity: 0;
-
-  animation:
-    contentReveal
-    0.65s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    calc(var(--animation-delay) + 0.45s)
-    forwards;
+  animation: contentReveal 0.55s ease
+    calc(var(--animation-delay) + 0.28s) forwards;
 }
-
-
-/* =========================================================
-   CONTENT REVEAL
-========================================================= */
 
 @keyframes contentReveal {
-  0% {
-    opacity: 0;
-
-    transform:
-      translateY(18px);
-  }
-
-  100% {
-    opacity: 1;
-
-    transform:
-      translateY(0);
-  }
-}
-
-
-/* =========================================================
-   LEARN MORE
-========================================================= */
-
-.regular-programs__learn-more {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 9px;
-
-  margin-top: auto;
-
-  min-width: 0;
-
-  padding: 0;
-
-  border: 0;
-  outline: none;
-
-  background: transparent;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 24px;
-  font-weight: 800;
-
-  line-height: 1;
-
-  text-align: center;
-
-  cursor: pointer;
-
-  appearance: none;
-
-  opacity: 0;
-
-  animation:
-    buttonReveal
-    0.65s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    calc(var(--animation-delay) + 0.55s)
-    forwards;
-
-  transition:
-    transform 0.35s ease,
-    letter-spacing 0.35s ease;
-}
-
-@keyframes buttonReveal {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
 
   to {
@@ -542,333 +326,148 @@
   }
 }
 
+/* =========================================================
+   LEARN MORE BUTTON
+========================================================= */
 
-/* Arrow */
+.regular-programs__learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: auto;
+  padding: 12px 0 2px;
+
+  border: 0;
+  background: transparent;
+  color: var(--action-color);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+
+  cursor: pointer;
+  appearance: none;
+
+  opacity: 0;
+  animation: contentReveal 0.55s ease
+    calc(var(--animation-delay) + 0.36s) forwards;
+
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.regular-programs__learn-more:hover {
+  transform: translateY(-2px);
+  letter-spacing: 0.5px;
+}
 
 .learn-more-arrow {
   display: inline-block;
-
-  transition:
-    transform 0.35s ease;
-}
-
-
-/* Button hover */
-
-.regular-programs__learn-more:hover {
-  transform: translateY(-4px);
-
-  letter-spacing: 1px;
+  transition: transform 0.3s ease;
 }
 
 .regular-programs__learn-more:hover .learn-more-arrow {
-  transform: translateX(7px);
+  transform: translateX(5px);
 }
-
-
-/* Focus */
 
 .regular-programs__learn-more:focus-visible {
   outline: 2px solid #111111;
-
   outline-offset: 5px;
+  border-radius: 3px;
 }
 
-
 /* =========================================================
-   CONTROLS
+   CAROUSEL ARROWS
 ========================================================= */
 
 .regular-programs__controls {
   position: absolute;
-
   inset: 0;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 12px;
-
+  padding: 0 8px;
   pointer-events: none;
-
-  z-index: 20;
+  z-index: 5;
 }
 
-
 .regular-programs__control {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   padding: 0;
-
-  border: 0;
-
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.92);
+  color: #222222;
 
-  color: #111111;
-
-  font-size: 35px;
-
+  font-size: 30px;
   line-height: 1;
 
   cursor: pointer;
-
-  opacity: 0;
-
   pointer-events: auto;
 
+  opacity: 0.75;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
   transition:
-    opacity 0.3s ease,
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.3s ease;
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
 }
-
-
-/* Show arrows */
-
-.regular-programs__carousel:hover .regular-programs__control {
-  opacity: 0.4;
-}
-
-
-/* Arrow hover */
 
 .regular-programs__control:hover {
-  opacity: 1 !important;
-
-  background: rgba(255, 255, 255, 0.95);
-
-  transform: scale(1.12);
+  opacity: 1;
+  background: #ffffff;
+  transform: scale(1.08);
 }
-
-
-/* Arrow click */
 
 .regular-programs__control:active {
-  transform: scale(0.9);
+  transform: scale(0.94);
 }
 
+.regular-programs__control:focus-visible {
+  outline: 2px solid #df2080;
+  outline-offset: 3px;
+}
 
 /* =========================================================
-   LARGE DESKTOP
+   LARGE DESKTOP: 1600px+
 ========================================================= */
 
 @media (min-width: 1600px) {
-
-  .regular-programs {
-    padding-top: 55px;
-  }
-
-  .regular-programs__title {
-    font-size: 52px;
-  }
-
-  .regular-programs__carousel {
-    margin-top: 58px;
-  }
-
   .regular-programs__track {
-    --card-width: 442px;
-    --card-gap: 54px;
+    --card-width: 360px;
+    --card-gap: 32px;
 
     padding-left: 45px;
     padding-right: 45px;
   }
 
   .regular-programs__card {
-    height: 546px;
+    height: 460px;
   }
 }
 
-
 /* =========================================================
-   1440px - 1599px
+   DESKTOP: 1200px–1599px
 ========================================================= */
 
-@media (max-width: 1599px) and (min-width: 1440px) {
-
-  .regular-programs__title {
-    font-size: 64px;
-  }
-
-  .regular-programs__track {
-    --card-width: 420px;
-    --card-gap: 50px;
-
-    padding-left: 45px;
-  }
-
-  .regular-programs__card {
-    height: 530px;
-  }
-
-  .regular-programs__image-area {
-    height: 215px;
-  }
-
-  .regular-programs__image {
-    width: 220px;
-    height: 205px;
-  }
-
-  .regular-programs__card-title {
-    font-size: 29px;
-  }
-
-  .regular-programs__age {
-    font-size: 24px;
-  }
-
-  .regular-programs__description {
-    font-size: 24px;
-  }
-
-  .regular-programs__learn-more {
-    font-size: 23px;
-  }
-}
-
-
-/* =========================================================
-   LAPTOP
-========================================================= */
-
-@media (max-width: 1439px) and (min-width: 1200px) {
-
+@media (max-width: 1599px) and (min-width: 1200px) {
   .regular-programs {
-    padding-top: 50px;
-  }
-
-  .regular-programs__title {
-    font-size: 64px;
-  }
-
-  .regular-programs__carousel {
-    margin-top: 52px;
-  }
-
-  .regular-programs__track {
-    --card-width: 390px;
-    --card-gap: 48px;
-
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .regular-programs__card {
-    height: 510px;
-
-    padding: 55px 22px 25px;
-  }
-
-  .regular-programs__image-area {
-    height: 205px;
-  }
-
-  .regular-programs__image {
-    width: 205px;
-    height: 190px;
-  }
-
-  .regular-programs__card-title {
-    font-size: 27px;
-  }
-
-  .regular-programs__age {
-    font-size: 22px;
-    margin-top: 16px;
-  }
-
-  .regular-programs__description {
-    margin-top: 27px;
-    font-size: 22px;
-  }
-
-  .regular-programs__learn-more {
-    font-size: 21px;
-  }
-}
-
-
-/* =========================================================
-   TABLET LANDSCAPE
-========================================================= */
-
-@media (max-width: 1199px) and (min-width: 1024px) {
-
-  .regular-programs {
-    padding-top: 45px;
-    padding-bottom: 75px;
-  }
-
-  .regular-programs__title {
-    font-size: 55px;
-  }
-
-  .regular-programs__carousel {
-    margin-top: 45px;
-  }
-
-  .regular-programs__track {
-    --card-width: 360px;
-    --card-gap: 38px;
-
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .regular-programs__card {
-    height: 490px;
-
-    padding: 48px 20px 24px;
-  }
-
-  .regular-programs__image-area {
-    height: 195px;
-  }
-
-  .regular-programs__image {
-    width: 190px;
-    height: 180px;
-  }
-
-  .regular-programs__card-title {
-    font-size: 25px;
-  }
-
-  .regular-programs__age {
-    font-size: 20px;
-    margin-top: 15px;
-  }
-
-  .regular-programs__description {
-    margin-top: 25px;
-    font-size: 20px;
-  }
-
-  .regular-programs__learn-more {
-    font-size: 20px;
-  }
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1023px) and (min-width: 768px) {
-
-  .regular-programs {
-    padding: 42px 0 70px;
+    padding-top: 48px;
   }
 
   .regular-programs__title {
@@ -876,30 +475,30 @@
   }
 
   .regular-programs__carousel {
-    margin-top: 42px;
+    margin-top: 40px;
   }
 
   .regular-programs__track {
-    --card-width: 350px;
-    --card-gap: 30px;
+    --card-width: 340px;
+    --card-gap: 28px;
 
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .regular-programs__card {
-    height: 475px;
-
-    padding: 42px 18px 22px;
+    height: 460px;
+    padding: 34px 20px 24px;
   }
 
   .regular-programs__image-area {
-    height: 185px;
+    height: 175px;
+    flex-basis: 175px;
   }
 
   .regular-programs__image {
-    width: 175px;
-    height: 170px;
+    width: 185px;
+    height: 165px;
   }
 
   .regular-programs__card-title {
@@ -907,157 +506,120 @@
   }
 
   .regular-programs__age {
-    font-size: 19px;
-    margin-top: 14px;
-  }
-
-  .regular-programs__description {
-    margin-top: 23px;
     font-size: 18px;
   }
 
+  .regular-programs__description {
+    font-size: 17px;
+  }
+
   .regular-programs__learn-more {
-    font-size: 19px;
+    font-size: 17px;
   }
 }
 
+/* =========================================================
+   LAPTOP / TABLET LANDSCAPE: 768px–1199px
+========================================================= */
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .regular-programs {
+    padding: 42px 0 65px;
+  }
+
+  .regular-programs__title {
+    font-size: 42px;
+  }
+
+  .regular-programs__carousel {
+    margin-top: 34px;
+  }
+
+  .regular-programs__track {
+    --card-width: 320px;
+    --card-gap: 24px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .regular-programs__card {
+    height: 450px;
+    padding: 30px 18px 22px;
+  }
+
+  .regular-programs__image-area {
+    height: 165px;
+    flex-basis: 165px;
+  }
+
+  .regular-programs__image {
+    width: 170px;
+    height: 155px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 23px;
+  }
+
+  .regular-programs__age {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+
+  .regular-programs__description {
+    margin-top: 19px;
+    font-size: 16px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 17px;
+  }
+}
 
 /* =========================================================
-   MOBILE
+   MOBILE: 480px–767px
 ========================================================= */
 
 @media (max-width: 767px) {
-
   .regular-programs {
-    padding: 38px 0 60px;
-  }
-
-  .regular-programs__container {
-    width: 100%;
+    padding: 36px 0 50px;
   }
 
   .regular-programs__title {
     padding: 0 15px;
-
-    font-size: 48px;
-
-    line-height: 1.08;
-
+    font-size: 36px;
+    line-height: 1.15;
     white-space: normal;
   }
 
   .regular-programs__carousel {
-    margin-top: 35px;
+    margin-top: 28px;
   }
 
   .regular-programs__track {
-    --card-width: calc(100vw - 40px);
-    --card-gap: 20px;
+    --card-width: min(360px, calc(100vw - 40px));
+    --card-gap: 18px;
 
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .regular-programs__card {
-    width: calc(100vw - 40px);
-
+    width: var(--card-width);
     height: 450px;
-
-    padding: 38px 20px 24px;
-
+    padding: 30px 18px 22px;
     border-radius: 13px;
   }
 
   .regular-programs__image-area {
-    height: 180px;
+    height: 165px;
+    flex-basis: 165px;
   }
 
   .regular-programs__image {
-    width: 175px;
-    height: 165px;
-  }
-
-  .regular-programs__card-title {
-    margin-top: 8px;
-    font-size: 25px;
-  }
-
-  .regular-programs__age {
-    margin-top: 14px;
-    font-size: 20px;
-    white-space: normal;
-  }
-
-  .regular-programs__description {
-    margin-top: 25px;
-    font-size: 19px;
-    line-height: 1.2;
-  }
-
-  .regular-programs__learn-more {
-    font-size: 20px;
-  }
-
-  .regular-programs__controls {
-    padding: 0 8px;
-  }
-
-  .regular-programs__control {
-    width: 38px;
-    height: 38px;
-    font-size: 31px;
-  }
-
-  .regular-programs__card:hover {
-    transform: translateY(-7px) scale(1.01);
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 479px) {
-
-  .regular-programs {
-    padding: 32px 0 55px;
-  }
-
-  .regular-programs__title {
-    font-size: 40px;
-    padding: 0 12px;
-  }
-
-  .regular-programs__carousel {
-    margin-top: 30px;
-  }
-
-  .regular-programs__track {
-    --card-width: calc(100vw - 28px);
-    --card-gap: 14px;
-
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .regular-programs__card {
-    width: calc(100vw - 28px);
-
-    height: 430px;
-
-    padding: 32px 17px 22px;
-
-    border-radius: 12px;
-  }
-
-  .regular-programs__image-area {
-    height: 165px;
-  }
-
-  .regular-programs__image {
-    width: 155px;
-    height: 150px;
+    width: 170px;
+    height: 155px;
   }
 
   .regular-programs__card-title {
@@ -1066,84 +628,158 @@
   }
 
   .regular-programs__age {
-    margin-top: 13px;
+    margin-top: 12px;
     font-size: 18px;
   }
 
   .regular-programs__description {
-    margin-top: 23px;
-    font-size: 17px;
-    line-height: 1.2;
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 1.35;
   }
 
   .regular-programs__learn-more {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .regular-programs__controls {
+    padding: 0 5px;
   }
 
   .regular-programs__control {
-    width: 34px;
-    height: 34px;
-    font-size: 28px;
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+    font-size: 27px;
+  }
+
+  .regular-programs__card:hover {
+    transform: translateY(-3px);
   }
 }
 
-
 /* =========================================================
-   VERY SMALL MOBILE
+   SMALL MOBILE: 360px–479px
 ========================================================= */
 
-@media (max-width: 359px) {
-
+@media (max-width: 479px) {
   .regular-programs {
-    padding-top: 28px;
+    padding: 30px 0 42px;
   }
 
   .regular-programs__title {
-    font-size: 35px;
+    padding: 0 12px;
+    font-size: 31px;
   }
 
   .regular-programs__carousel {
-    margin-top: 26px;
+    margin-top: 24px;
+  }
+
+  .regular-programs__track {
+    --card-width: calc(100vw - 32px);
+    --card-gap: 14px;
+
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .regular-programs__card {
-    height: 410px;
-    padding-top: 28px;
+    height: 440px;
+    padding: 27px 16px 21px;
+    border-radius: 12px;
   }
 
   .regular-programs__image-area {
     height: 155px;
+    flex-basis: 155px;
   }
 
   .regular-programs__image {
-    width: 140px;
-    height: 140px;
+    width: 155px;
+    height: 145px;
   }
 
   .regular-programs__card-title {
-    font-size: 21px;
+    font-size: 22px;
   }
 
   .regular-programs__age {
-    font-size: 16px;
+    margin-top: 11px;
+    font-size: 17px;
   }
 
   .regular-programs__description {
+    margin-top: 18px;
     font-size: 15px;
   }
 
   .regular-programs__learn-more {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
+/* =========================================================
+   VERY SMALL MOBILE: BELOW 360px
+========================================================= */
+
+@media (max-width: 359px) {
+  .regular-programs__title {
+    font-size: 28px;
+  }
+
+  .regular-programs__track {
+    --card-width: calc(100vw - 24px);
+    --card-gap: 12px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .regular-programs__card {
+    height: 420px;
+    padding: 24px 13px 19px;
+  }
+
+  .regular-programs__image-area {
+    height: 145px;
+    flex-basis: 145px;
+  }
+
+  .regular-programs__image {
+    width: 140px;
+    height: 135px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 20px;
+  }
+
+  .regular-programs__age {
+    font-size: 15px;
+  }
+
+  .regular-programs__description {
+    font-size: 14px;
+  }
+
+  .regular-programs__learn-more {
+    font-size: 15px;
+  }
+
+  .regular-programs__control {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 24px;
+  }
+}
 
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY: REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   .regular-programs__title,
   .regular-programs__carousel,
   .regular-programs__card,
@@ -1152,7 +788,7 @@
   .regular-programs__description,
   .regular-programs__learn-more,
   .regular-programs__image {
-    animation: none;
+    animation: none !important;
     opacity: 1;
     transform: none;
   }
@@ -1161,110 +797,131 @@
     scroll-behavior: auto;
   }
 
-  .regular-programs__control,
   .regular-programs__card,
   .regular-programs__image,
-  .regular-programs__learn-more {
+  .regular-programs__learn-more,
+  .regular-programs__control {
     transition: none;
+  }
+
+  .regular-programs__card::before {
+    display: none;
   }
 }
 
 
 /* =========================================================
-   REGULAR PROGRAM ANIMATION
+   DESKTOP — SHOW ALL 4 PROGRAM CARDS
+   HIDE CAROUSEL ARROWS
 ========================================================= */
 
-.regular-programs {
-  overflow: hidden;
+@media (min-width: 1200px) {
+
+  .regular-programs {
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .regular-programs__container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .regular-programs__carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Remove scrolling and show all cards */
+  .regular-programs__viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 0 18px;
+    scroll-snap-type: none;
+  }
+
+  /* Fit all 4 cards within the available width */
+  .regular-programs__track {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    padding: 0;
+  }
+
+  .regular-programs__card {
+    width: 100%;
+    min-width: 0;
+    height: 460px;
+    padding: 30px 14px 22px;
+  }
+
+  .regular-programs__image-area {
+    width: 100%;
+    height: 165px;
+    flex: 0 0 165px;
+  }
+
+  .regular-programs__image {
+    width: 175px;
+    max-width: 100%;
+    height: 160px;
+  }
+
+  .regular-programs__card-title {
+    font-size: 22px;
+  }
+
+  .regular-programs__age {
+    font-size: 16px;
+  }
+
+  .regular-programs__description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Hide previous and next arrow buttons */
+  .regular-programs__controls {
+    display: none !important;
+  }
+
+  .regular-programs__control {
+    display: none !important;
+  }
 }
 
-.regular-programs__title {
-  opacity: 0;
-  transform: translateY(35px);
+/* =========================================================
+   WIDE DESKTOP — MORE SPACE BETWEEN CARDS
+========================================================= */
 
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
+@media (min-width: 1600px) {
 
-.regular-programs.show .regular-programs__title {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .regular-programs__container {
+    max-width: 1600px;
+  }
 
-.regular-programs__track > .regular-programs__card {
-  opacity: 0;
-  transform: translateY(50px) scale(0.95);
+  .regular-programs__track {
+    gap: 30px;
+  }
 
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.4s ease;
-}
+  .regular-programs__card {
+    height: 460px;
+    padding: 32px 20px 24px;
+  }
 
-.regular-programs.show .regular-programs__track > .regular-programs__card {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
+  .regular-programs__card-title {
+    font-size: 25px;
+  }
 
-.regular-programs.show
-.regular-programs__track
-> .regular-programs__card:nth-child(1) {
-  transition-delay: 0.1s;
-}
+  .regular-programs__age {
+    font-size: 18px;
+  }
 
-.regular-programs.show
-.regular-programs__track
-> .regular-programs__card:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.regular-programs.show
-.regular-programs__track
-> .regular-programs__card:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.regular-programs.show
-.regular-programs__track
-> .regular-programs__card:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-.regular-programs__card:hover {
-  transform: translateY(-12px) scale(1.015) !important;
-  box-shadow:
-    0 20px 35px rgba(0, 0, 0, 0.13);
-}
-
-.regular-programs__image {
-  transition:
-    transform 0.6s ease;
-}
-
-.regular-programs__card:hover
-.regular-programs__image {
-  transform: scale(1.08) rotate(1deg);
-}
-
-.regular-programs__learn-more {
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
-
-.regular-programs__learn-more:hover {
-  transform: translateX(7px);
-}
-
-.learn-more-arrow {
-  display: inline-block;
-
-  transition:
-    transform 0.3s ease;
-}
-
-.regular-programs__learn-more:hover
-.learn-more-arrow {
-  transform: translateX(6px);
+  .regular-programs__description {
+    font-size: 16px;
+  }
 }

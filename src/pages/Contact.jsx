@@ -1,7 +1,7 @@
 import "./Contact.css";
 import { useEffect } from "react";
 
-import bee from "../assets/images/bee.png";
+import bee from "../assets/images/stars.png";
 import whatsappIcon from "../assets/images/whatsapp.png";
 import callicon from "../assets/images/call.png";
 
@@ -52,6 +52,17 @@ function GetInTouch() {
             <br className="desktop-break" />
             your child’s learning, growth, and development.
           </p>
+
+          <div className="golden-stars">
+          <span className="gold-star star-1">★</span>
+          <span className="gold-star star-2">★</span>
+          <span className="gold-star star-3">★</span>
+          <span className="gold-star star-4">★</span>
+          {/* <span className="gold-star star-5">★</span>
+          <span className="gold-star star-6">★</span>
+          <span className="gold-star star-7">★</span>
+          <span className="gold-star star-8">★</span> */}
+        </div>
 
         </div>
       </section>
@@ -106,15 +117,15 @@ function GetInTouch() {
 
                 <p>
                   <strong>E-MAIL:</strong>{" "}
-                  <a href="mailto:twinklingstars@gmail.com">
-                    twinklingstars@gmail.com
+                  <a href="mailto:twinklingstarsdaycare4you@gmail.com">
+                    twinklingstarsdaycare4you@gmail.com
                   </a>
                 </p>
 
                 <p>
                   <strong>PHONE:</strong>{" "}
-                  <a href="tel:55465642118">
-                    +971564740473
+                  <a href="tel:+971541412448">
+                    +971541412448
                   </a>
                 </p>
 
@@ -154,7 +165,7 @@ function GetInTouch() {
                   </li>
 
                   <li>
-                    6:30 Am - 7:30 Pm
+                    6:30 Am - 8:30 Pm
                   </li>
                 </ul>
 
@@ -241,7 +252,7 @@ function GetInTouch() {
           {/* CALL BUTTON */}
 
           <a
-            href="tel:+971564740473"
+            href="tel:+971541412448"
             className="call-button"
             aria-label="Call us"
           >
@@ -255,7 +266,7 @@ function GetInTouch() {
           {/* WHATSAPP */}
 
           <a
-            href="https://wa.me/+971564740473"
+            href="https://wa.me/+971541412448"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-button"

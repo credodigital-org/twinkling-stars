@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import "./Program.css";
 import { useNavigate } from "react-router-dom";
 
@@ -140,6 +140,36 @@ function ProgramCard({
   const decorationClass =
     decorationClasses[index % decorationClasses.length];
 
+  useEffect(() => {
+  const cards = document.querySelectorAll(
+    ".programs-page .program-card"
+  );
+
+  if (!("IntersectionObserver" in window)) {
+    cards.forEach((card) => card.classList.add("show"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -35px 0px",
+    }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+
+  return () => observer.disconnect();
+}, []);
+
   return (
     <article
       className={`program-card ${program.side} ${
@@ -174,14 +204,20 @@ function ProgramCard({
 function Programs() {
   const navigate = useNavigate();
 
-  const handleEnrollClick = () => {
-    navigate("/contact"); 
-    window.scrollTo({ 
-      top: 0, 
-      behavior: "smooth", 
-    }); 
-  };
+   useEffect(() => {
+    if (window.location.hash === "#regular-programs") {
+      setTimeout(() => {
+        const section = document.getElementById("regular-programs");
 
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    }
+  }, []);
   return (
     <main className="programs-page">
 
@@ -206,12 +242,25 @@ function Programs() {
           />
         </div>
 
+        <div className="golden-stars">
+          <span className="gold-star star-1">★</span>
+          <span className="gold-star star-2">★</span>
+          <span className="gold-star star-3">★</span>
+          <span className="gold-star star-4">★</span>
+          <span className="gold-star star-5">★</span>
+          <span className="gold-star star-6">★</span>
+          <span className="gold-star star-7">★</span>
+          <span className="gold-star star-8">★</span>
+        </div>
+
       </section>
 
 
       {/* ================= REGULAR PROGRAMS ================= */}
 
-      <section className="regular-programs">
+      <section className="regular-programs"
+      id="regular-programs"
+      >
 
         <div className="program-list">
 

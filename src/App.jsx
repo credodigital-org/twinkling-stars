@@ -100,7 +100,7 @@ function App() {
 
           {/* CALL BUTTON */}
           <a
-            href="tel:+971564740473"
+            href="tel: +971541412448"
             className="contact-btn call-btn"
             aria-label="Call Us"
           >
@@ -113,7 +113,7 @@ function App() {
 
           {/* WHATSAPP BUTTON */}
           <a
-            href="https://wa.me/+971564740473?text=Hello!%20I%20would%20like%20to%20inquire%20about%20admissions."
+            href="https://wa.me/+971541412448?text=Hello!%20I%20would%20like%20to%20inquire%20about%20admissions."
             target="_blank"
             rel="noopener noreferrer"
             className="contact-btn whatsapp-btn"

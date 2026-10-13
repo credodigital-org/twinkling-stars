@@ -19,8 +19,10 @@ function Footer() {
             <p>Near Kozhikode Restaurant</p>
             <p>Abu Dhabi city.</p>
 
+            <hr className="footer-divider" />
+
             <p>Contact:</p>
-            <p>+971564740473</p>
+            <p>+971541412448</p>
 
             <p>Email :</p>
             <p className="footer-email">
@@ -30,7 +32,7 @@ function Footer() {
 
           <div className="footer-logo footer-wonder-logo">
             <img
-              src={wonderBeesLogo}
+              src={winklingStarsLogo}
               alt="Wonder Bees"
             />
           </div>
@@ -44,9 +46,9 @@ function Footer() {
             <p>Opposite Model School, Gate No 2</p>
             <p>Mussafah - Shabiya</p>
 
-            <br />
+            <hr className="footer-divider" />
 
-            <p>Contact: +971564740473</p>
+            <p>Contact: +971541412448</p>
             <p>email :</p>
             <p className="footer-email">
               wonderbees.shabiya12@gmail.com
@@ -55,7 +57,7 @@ function Footer() {
 
           <div className="footer-logo footer-winkling-logo">
             <img
-              src={winklingStarsLogo}
+              src={wonderBeesLogo}
               alt="Winkling Stars Daycare Preschool"
             />
           </div>

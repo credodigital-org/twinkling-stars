@@ -17,9 +17,9 @@ function About({ aboutImage, flowerImage }) {
           </h2>
 
           <h3>
-            Nurturing Little Minds,
+            Little Stars of Today, Bright
             <br />
-            Inspiring Bright Futures
+            and Shinning Futures of Tomorrow
           </h3>
 
           <p>

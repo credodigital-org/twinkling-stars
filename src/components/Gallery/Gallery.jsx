@@ -243,35 +243,43 @@ return ( <section className="gallery-section">
   ========================================== */}
 
   <motion.button
-    type="button"
-    className="gallery-view-more"
-    onClick={() => navigate("/gallery")}
-    initial={{
-      opacity: 0,
-      y: 25,
-    }}
-    whileInView={{
-      opacity: 1,
-      y: 0,
-    }}
-    viewport={{
-      once: true,
-      amount: 0.2,
-    }}
-    transition={{
-      duration: 0.6,
-      delay: 0.2,
-      ease: "easeOut",
-    }}
-    whileHover={{
-      y: -4,
-    }}
-    whileTap={{
-      scale: 0.97,
-    }}
-  >
-    VIEW MORE
-  </motion.button>
+  type="button"
+  className="gallery-view-more"
+  onClick={() => {
+    navigate("/gallery");
+
+    window.scrollTo({
+      top: 500,
+      left: 0,
+      behavior: "instant",
+    });
+  }}
+  initial={{
+    opacity: 0,
+    y: 25,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.2,
+  }}
+  transition={{
+    duration: 0.6,
+    delay: 0.2,
+    ease: "easeOut",
+  }}
+  whileHover={{
+    y: -4,
+  }}
+  whileTap={{
+    scale: 0.97,
+  }}
+>
+  VIEW MORE
+</motion.button>
 
 </section>
 
