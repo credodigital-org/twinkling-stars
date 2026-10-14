@@ -1695,3 +1695,66 @@
     transition: none !important;
   }
 }
+
+
+/* =========================================
+   MOBILE — SHOW CAROUSEL ARROWS
+========================================= */
+
+@media (max-width: 767px) {
+  .special-programs-slider {
+    position: relative;
+  }
+
+  .special-programs-arrow,
+  .special-programs-arrow-left,
+  .special-programs-arrow-right {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #db2385;
+
+    font-size: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-50%);
+  }
+
+  .special-programs-arrow-left {
+    left: 6px;
+  }
+
+  .special-programs-arrow-right {
+    right: 6px;
+  }
+
+  .special-programs-arrow:active {
+    transform: translateY(-50%) scale(0.92);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .special-programs-arrow,
+  .special-programs-arrow-left,
+  .special-programs-arrow-right {
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+  }
+}
