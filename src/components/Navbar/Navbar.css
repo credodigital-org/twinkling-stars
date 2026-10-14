@@ -1,13 +1,17 @@
 /* =========================================================
    NAVBAR
 ========================================================= */
+body {
+  margin: 0;
+  padding-top: 205px;
+}
 
 .site-header,
 .site-header * {
   box-sizing: border-box;
 }
 
-.site-header {
+/* .site-header {
   position: relative;
 
   width: 100%;
@@ -16,7 +20,35 @@
   background: #ffffff;
 
   overflow: hidden;
+} */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 205px;
+
+  background: #ffffff;
+
+  z-index: 9999;
+
+  overflow: visible;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
 }
+
+/* .main-navbar {
+  position: relative;
+
+  width: 100%;
+  min-height: 205px;
+
+  background: #ffffff;
+} */
 
 .main-navbar {
   position: relative;
@@ -196,21 +228,21 @@
 @media (min-width: 1600px) {
 
   .site-header {
-    min-height: 215px;
+    min-height: 170px;
   }
 
   .main-navbar {
-    min-height: 215px;
+    min-height: 170px;
   }
 
   .navbar-logo-link {
-    top: 20px;
+    top: 10px;
     left: 48px;
-    width: 225px;
+    width: 175px;
   }
 
   .navbar-menu {
-    top: 70px;
+    top: 46px;
 
     width: 1000px;
 
@@ -240,21 +272,21 @@
 @media (min-width: 1200px) and (max-width: 1599px) {
 
   .site-header {
-    min-height: 205px;
+    min-height: 150px;
   }
 
   .main-navbar {
-    min-height: 205px;
+    min-height: 150px;
   }
 
   .navbar-logo-link {
-    top: 30px;
+    top: 10px;
     left: 38px;
-    width: 200px;
+    width: 150px;
   }
 
   .navbar-menu {
-    top: 68px;
+    top: 44px;
 
     width: min(800px, 65vw);
 
@@ -286,25 +318,25 @@
 @media (min-width: 1025px) and (max-width: 1199px) {
 
   .site-header {
-    min-height: 175px;
+    min-height: 120px;
   }
 
   .main-navbar {
-    min-height: 175px;
+    min-height: 120px;
   }
 
   .navbar-logo-link {
-    top: 25px;
+    top: 10px;
     left: 28px;
-    width: 180px;
+    width: 120px;
   }
 
   .navbar-menu {
-    top: 60px;
+    top: 30px;
 
     width: 68%;
 
-    min-height: 64px;
+    min-height: 54px;
 
     padding: 8px 34px;
 
@@ -320,7 +352,7 @@
   }
 
   .nav-link.active {
-    min-height: 44px;
+    min-height: 34px;
     padding: 8px 12px;
   }
 }
@@ -334,21 +366,21 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .site-header {
-    min-height: 140px;
+    min-height: 100px;
   }
 
   .main-navbar {
-    min-height: 140px;
+    min-height: 100px;
   }
 
   .navbar-logo-link {
-    top: 24px;
+    top: 10px;
     left: 25px;
-    width: 130px;
+    width: 100px;
   }
 
   .navbar-menu {
-    top: 55px;
+    top: 25px;
 
     width: 68%;
 
@@ -383,18 +415,65 @@
 
 @media (max-width: 767px) {
 
-  .site-header {
+  /* .site-header {
     width: 100%;
     min-height: 120px;
     height: auto;
-    overflow: visible;
+    overflow: visible; */
 
     /* Bottom shadow */
-    position: relative;
+    /* position: relative;
     z-index: 100;
+  } */
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 0;
+    height: auto;
+
+    background: #ffffff;
+
+    overflow: visible;
+
+    z-index: 9999;
+
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.12),
+      0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
+
+  /* .main-navbar {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+
+    padding: 8px 8px 14px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: #ffffff; */
+
+    /* =====================================================
+       BOTTOM SHADOW
+    ===================================================== */
+    /* box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.12),
+      0 1px 3px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 100;
+  } */
+
   .main-navbar {
+    position: relative;
+
     width: 100%;
     min-height: 0;
     height: auto;
@@ -407,15 +486,12 @@
 
     background: #ffffff;
 
-    /* =====================================================
-       BOTTOM SHADOW
-    ===================================================== */
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.12),
-      0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
+  }
 
-    position: relative;
-    z-index: 100;
+  /* Reserve space for the fixed mobile navbar */
+  body {
+    padding-top: 90px;
   }
 
 
@@ -659,6 +735,9 @@
 ========================================================= */
 
 @media (min-width: 361px) and (max-width: 480px) {
+  body {
+    padding-top: 75px;
+  }
 
   .main-navbar {
     padding: 8px 9px 4px;
@@ -712,6 +791,9 @@
 ========================================================= */
 
 @media (max-width: 360px) {
+  body {
+    padding-top: 65px;
+  }
 
   .main-navbar {
     padding: 7px 7px 2px;
@@ -860,3 +942,73 @@
     will-change: auto;
   }
 }
+
+/* =========================================================
+   FIXED NAVBAR RESPONSIVE HEIGHTS
+========================================================= */
+
+/* Large desktop */
+/* @media (min-width: 1600px) {
+  .site-header,
+  .main-navbar {
+    min-height: 170px;
+  }
+
+  body {
+    padding-top: 170px;
+  }
+} */
+
+/* Desktop */
+/* @media (min-width: 1200px) and (max-width: 1599px) {
+  .site-header,
+  .main-navbar {
+    min-height: 150px;
+  }
+
+  body {
+    padding-top: 150px;
+  }
+} */
+
+/* Small laptop */
+/* @media (min-width: 1025px) and (max-width: 1199px) {
+  .site-header,
+  .main-navbar {
+    min-height: 175px;
+  }
+
+  body {
+    padding-top: 175px;
+  }
+} */
+
+/* Tablet */
+/* @media (min-width: 768px) and (max-width: 1024px) {
+  .site-header,
+  .main-navbar {
+    min-height: 140px;
+  }
+
+  body {
+    padding-top: 140px;
+  }
+} */
+
+/* Mobile */
+/* @media (max-width: 767px) {
+  .site-header {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .main-navbar {
+    min-height: 0;
+    height: auto;
+  }
+
+  body {
+    padding-top: 0;
+  }
+} */

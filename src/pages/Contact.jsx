@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import bee from "../assets/images/stars.png";
 import whatsappIcon from "../assets/images/whatsapp.png";
 import callicon from "../assets/images/call.png";
+import instagram from "../assets/images/Instagram.png";
 
 function GetInTouch() {
   useEffect(() => {
@@ -54,10 +55,10 @@ function GetInTouch() {
           </p>
 
           <div className="golden-stars">
-          <span className="gold-star star-1">★</span>
-          <span className="gold-star star-2">★</span>
-          <span className="gold-star star-3">★</span>
-          <span className="gold-star star-4">★</span>
+          {/* <span className="gold-star star-1">★</span> */}
+          {/* <span className="gold-star star-2">★</span> */}
+          {/* <span className="gold-star star-3">★</span>
+          <span className="gold-star star-4">★</span> */}
           {/* <span className="gold-star star-5">★</span>
           <span className="gold-star star-6">★</span>
           <span className="gold-star star-7">★</span>
@@ -124,8 +125,8 @@ function GetInTouch() {
 
                 <p>
                   <strong>PHONE:</strong>{" "}
-                  <a href="tel:+971541412448">
-                    +971541412448
+                  <a href="tel:+971564740473">
+                    +971564740473
                   </a>
                 </p>
 
@@ -196,6 +197,8 @@ function GetInTouch() {
                   id="name"
                   name="name"
                   autoComplete="name"
+                  placeholder="Enter your name"
+                  required
                 />
 
               </div>
@@ -214,6 +217,8 @@ function GetInTouch() {
                   id="phone"
                   name="phone"
                   autoComplete="tel"
+                  placeholder="Enter your phone number"
+                  required
                 />
 
               </div>
@@ -230,6 +235,9 @@ function GetInTouch() {
                 <textarea
                   id="enquiry"
                   name="enquiry"
+                  placeholder="Write your enquiry"
+                  rows={5}
+                  required
                 />
 
               </div>
@@ -252,7 +260,7 @@ function GetInTouch() {
           {/* CALL BUTTON */}
 
           <a
-            href="tel:+971541412448"
+            href="tel:+971564740473"
             className="call-button"
             aria-label="Call us"
           >
@@ -266,7 +274,7 @@ function GetInTouch() {
           {/* WHATSAPP */}
 
           <a
-            href="https://wa.me/+971541412448"
+            href="https://wa.me/+971564740473"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-button"
@@ -274,6 +282,19 @@ function GetInTouch() {
           >
             <img
               src={whatsappIcon}
+              alt="WhatsApp"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/twinklingstarsday?stkn=cDkwdXg5cGQzeWpj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="instagram-button"
+            aria-label="Chat on instagram"
+          >
+            <img
+              src={instagram}
               alt="WhatsApp"
             />
           </a>

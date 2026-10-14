@@ -6,6 +6,7 @@
 .programs-page {
   width: 100%;
   min-height: 100vh;
+  margin-top: 200px;
 
   overflow: visible;
 
@@ -692,6 +693,9 @@
 }
 
 @media (max-width: 1200px) {
+  .programs-page {
+    margin-top: 70px;
+  }
 
   .programs-page .programs-hero {
     max-width: 1100px;
@@ -759,6 +763,7 @@
     width: 100%;
     min-height: 100vh;
     overflow-x: visible;
+    margin-top: 100px;
   }
 
   .programs-page .programs-hero {
@@ -1033,6 +1038,9 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1100px) {
+  .programs-page {
+    margin-top: 120px;
+  }
 
   .programs-page .programs-hero {
     max-width: 1000px;
@@ -1172,6 +1180,9 @@
 }
 
 @media (max-width: 1024px) {
+  .programs-page {
+    margin-top: 90px;
+  }
 
   .programs-page .programs-hero {
     margin-top: 0;
@@ -1357,6 +1368,7 @@
     max-width: 100%;
 
     overflow-x: visible;
+    margin-top: 90px;
   }
 
   .programs-page .programs-hero {
@@ -1912,6 +1924,7 @@
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
+    margin-top: 90px;
   }
 
   .programs-page .programs-hero {
@@ -2032,6 +2045,7 @@
     width: calc(100% - 28px);
     max-width: 440px;
     margin: 35px auto 0;
+    padding: 10px 20px 32px;
   }
 
   .programs-page .program-list {
@@ -2290,6 +2304,9 @@
 }
 
 @media (max-width: 360px) {
+  .programs-page {
+    margin-top: 70px;
+  }
 
   .programs-page .programs-hero {
     padding: 16px 12px 0;
@@ -2645,5 +2662,62 @@
     transition: none;
     animation: none;
     will-change: auto;
+  }
+}
+
+
+/* =========================================
+   MOBILE GALLERY ANIMATIONS
+   Match desktop animation on mobile
+========================================= */
+
+@media (max-width: 768px) {
+  .gallery-page .gallery-card {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+    animation: galleryMobileReveal 0.7s ease forwards;
+    will-change: opacity, transform;
+  }
+
+  .gallery-page .gallery-card:nth-child(2n) {
+    animation-delay: 0.12s;
+  }
+
+  .gallery-page .gallery-card:nth-child(3n) {
+    animation-delay: 0.2s;
+  }
+
+  .gallery-page .gallery-card img {
+    transition: transform 0.6s ease;
+  }
+
+  /* Touch-friendly image interaction */
+  .gallery-page .gallery-card:active img {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes galleryMobileReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-page .gallery-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .gallery-page .gallery-card img {
+    transition: none;
   }
 }

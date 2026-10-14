@@ -1145,7 +1145,7 @@
 @media (max-width: 480px) {
 
   .parent-testimonials {
-    padding: 30px 12px 55px;
+    padding: 30px 22px 55px;
   }
 
   .testimonials-title {
@@ -1214,7 +1214,7 @@
 
   .testimonial-card-5 {
     padding-top: 150px;
-    min-height: 325px;
+    min-height: 225px;
   }
 
   .testimonial-card-5 .testimonial-image {
@@ -1233,6 +1233,10 @@
     height: 34px;
     font-size: 15px;
     letter-spacing: 3px;
+  }
+
+  .quote-bottom{
+    bottom: -42px;
   }
 }
 

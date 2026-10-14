@@ -22,19 +22,22 @@ function Footer() {
             <hr className="footer-divider" />
 
             <p>Contact:</p>
-            <p>+971541412448</p>
+            <p>
+              <a href="tel:+971564740473">
+                +971564740473
+              </a>
+            </p>
 
-            <p>Email :</p>
+            <p>Email:</p>
             <p className="footer-email">
-              twinklingstarsdaycare4you@gmail.com
+              <a href="mailto:twinklingstarsdaycare4you@gmail.com">
+                twinklingstarsdaycare4you@gmail.com
+              </a>
             </p>
           </div>
 
           <div className="footer-logo footer-wonder-logo">
-            <img
-              src={winklingStarsLogo}
-              alt="Wonder Bees"
-            />
+            <img src={winklingStarsLogo} alt="Twinkling Stars Daycare" />
           </div>
         </div>
 
@@ -48,18 +51,23 @@ function Footer() {
 
             <hr className="footer-divider" />
 
-            <p>Contact: +971541412448</p>
-            <p>email :</p>
+            <p>
+              Contact:{" "}
+              <a href="tel:+971564740473">
+                +971564740473
+              </a>
+            </p>
+
+            <p>Email:</p>
             <p className="footer-email">
-              wonderbees.shabiya12@gmail.com
+              <a href="mailto:wonderbees.shabiya12@gmail.com">
+                wonderbees.shabiya12@gmail.com
+              </a>
             </p>
           </div>
 
           <div className="footer-logo footer-winkling-logo">
-            <img
-              src={wonderBeesLogo}
-              alt="Winkling Stars Daycare Preschool"
-            />
+            <img src={wonderBeesLogo} alt="Wonder Bees Daycare Preschool" />
           </div>
         </div>
 
