@@ -10,6 +10,7 @@
 
   margin: 0;
   padding: 0;
+  margin-top: 160px;
 
   background: #ffffff;
 
@@ -120,7 +121,7 @@
 }
 
 .hero-text h1 span:nth-child(4) {
-  color: #FFB900;
+  color: #FF8926;
   font-size: clamp(52px, 6vw, 85px);
   margin-top: -87px;
   margin-left: 300px;
@@ -139,15 +140,15 @@
 }
 
 .hero-section.show .hero-text h1 span:nth-child(2) {
-  animation-delay: 1.35s;
+  animation-delay: 1.15s;
 }
 
 .hero-section.show .hero-text h1 span:nth-child(3) {
-  animation-delay: 2.5s;
+  animation-delay: 2.0s;
 }
 
 .hero-section.show .hero-text h1 span:nth-child(4) {
-  animation-delay: 3.65s;
+  animation-delay: 3.15s;
 }
 
 /* Reveal from left to right */
@@ -691,6 +692,7 @@
 
     margin: 0;
     padding: 0;
+    margin-top: 180px;
 
     overflow: visible;
   }
@@ -943,6 +945,7 @@
     min-height: 720px;
 
     overflow: visible;
+    margin-top: 160px;
   }
 
   .hero-content {
@@ -1095,6 +1098,7 @@
     min-height: 550px;
 
     overflow: visible;
+    margin-top: 130px;
   }
 
   .hero-content {
@@ -1234,6 +1238,7 @@
     min-height: 400px;
 
     overflow: visible;
+    margin-top: 110px;
   }
 
   .hero-content {
@@ -1382,6 +1387,7 @@
     min-height: auto;
 
     overflow: visible;
+    margin-top: 110px;
   }
 
   .hero-content {
@@ -1561,7 +1567,7 @@
 
     margin: 3px 0 0;
 
-    color: #FFB900;
+    color: #FF8926;
 
     font-size: clamp(32px, 10vw, 43px);
 
@@ -1735,6 +1741,7 @@
     min-height: auto;
 
     overflow: visible;
+    margin-top: 100px;
   }
 
   .hero-content {
@@ -1882,6 +1889,7 @@
 
   .hero-section {
     overflow: visible;
+    margin-top: 100px;
   }
 
   .hero-content {
@@ -1989,6 +1997,7 @@
 
   .hero-section {
     overflow: visible;
+    margin-top: 80px;
   }
 
   .hero-content {
@@ -2236,3 +2245,82 @@
   }
 }
 
+
+
+/* =========================================
+   MOBILE TITLE ANIMATION — FIX DELAY
+========================================= */
+
+@media (max-width: 768px) {
+  /* Keep the title hidden until the hero appears */
+  .hero-section .hero-text h1 span {
+    clip-path: inset(0 100% 0 0);
+    animation: none;
+  }
+
+  /* Start typing as soon as .show is applied */
+  .hero-section.show .hero-text h1 span {
+    animation: mobileTitleReveal 0.65s steps(14, end) forwards;
+  }
+
+  /* Explore */
+  .hero-section.show .hero-text h1 span:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  /* Learn */
+  .hero-section.show .hero-text h1 span:nth-child(2) {
+    animation-delay: 0.45s;
+  }
+
+  /* Grow */
+  .hero-section.show .hero-text h1 span:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+
+  /* Together! */
+  .hero-section.show .hero-text h1 span:nth-child(4) {
+    animation-delay: 1.15s;
+  }
+}
+
+@keyframes mobileTitleReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Extra-small mobile: reveal titles faster */
+@media (max-width: 389px) {
+  .hero-section.show .hero-text h1 span {
+    animation-duration: 0.5s;
+  }
+
+  .hero-section.show .hero-text h1 span:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .hero-section.show .hero-text h1 span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  .hero-section.show .hero-text h1 span:nth-child(3) {
+    animation-delay: 0.55s;
+  }
+
+  .hero-section.show .hero-text h1 span:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section .hero-text h1 span {
+    animation: none !important;
+    clip-path: none !important;
+  }
+}

@@ -73,14 +73,14 @@ function Gallery() {
   ======================================================= */
 
   const galleryItems = [
-    { title: "Reading corner", image: readingCorner, className: "reading" },
-    { title: "Arts & Craft", image: artsCraft, className: "arts" },
-    { title: "Gardening", image: gardening, className: "gardening" },
-    { title: "Music Class", image: musicClass, className: "music" },
-    { title: "Playground", image: playground, className: "playground" },
-    { title: "Sports Day", image: sportsDay, className: "sports" },
-    { title: "Science Day", image: scienceDay, className: "science" },
-    { title: "Graduation", image: graduation, className: "graduation" },
+    // { title: "Reading corner", image: readingCorner, className: "reading" },
+    // { title: "Arts & Craft", image: artsCraft, className: "arts" },
+    // { title: "Gardening", image: gardening, className: "gardening" },
+    // { title: "Music Class", image: musicClass, className: "music" },
+    // { title: "Playground", image: playground, className: "playground" },
+    // { title: "Sports Day", image: sportsDay, className: "sports" },
+    // { title: "Science Day", image: scienceDay, className: "science" },
+    // { title: "Graduation", image: graduation, className: "graduation" },
 
     { title: "", image: img1, className: "reading", }, 
     { title: "", image: img2, className: "arts", }, 

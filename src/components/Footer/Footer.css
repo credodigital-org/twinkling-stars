@@ -187,6 +187,27 @@
 }
 
 
+
+/* Clickable phone and email links */
+
+.site-footer .footer-address a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-address a:hover {
+  color: #1095b5;
+  text-decoration: underline;
+}
+
+.site-footer .footer-address a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
 /* =========================================================
    LARGE DESKTOP
 ========================================================= */

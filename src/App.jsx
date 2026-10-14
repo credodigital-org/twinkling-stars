@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 import PublicLayout from "./Layouts/PublicLayout";
 
@@ -10,6 +11,7 @@ import Contact from "./pages/Contact";
 
 import whatsapp2 from "./assets/images/whatsapp.png";
 import callicon from "./assets/images/call.png";
+// import instagram from "./assets/images/Instagram.png";
 
 import "./App.css";
 import "./LoadingAnimation.css";
@@ -61,6 +63,8 @@ function App() {
       ================================================= */}
       <BrowserRouter>
 
+       <ScrollToTop />
+
         <Routes>
 
           {/* =================================================
@@ -100,7 +104,7 @@ function App() {
 
           {/* CALL BUTTON */}
           <a
-            href="tel: +971541412448"
+            href="tel: +971564740473"
             className="contact-btn call-btn"
             aria-label="Call Us"
           >
@@ -113,7 +117,7 @@ function App() {
 
           {/* WHATSAPP BUTTON */}
           <a
-            href="https://wa.me/+971541412448?text=Hello!%20I%20would%20like%20to%20inquire%20about%20admissions."
+            href="https://wa.me/+971564740473?text=Hello!%20I%20would%20like%20to%20inquire%20about%20admissions."
             target="_blank"
             rel="noopener noreferrer"
             className="contact-btn whatsapp-btn"
@@ -124,6 +128,19 @@ function App() {
               alt="WhatsApp"
             />
           </a>
+
+          {/* <a
+            href="https://www.instagram.com/twinklingstarsday?stkn=cDkwdXg5cGQzeWpj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn whatsapp-btn"
+            aria-label="Chat on WhatsApp"
+          >
+            <img
+              src={instagram}
+              alt="WhatsApp"
+            />
+          </a> */}
 
         </div>
 

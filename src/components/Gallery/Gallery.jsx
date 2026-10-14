@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 import "./Gallery.css";
 import { useNavigate } from "react-router-dom";
 
-import gallery1 from "../../assets/images/gallery1.png";
-import gallery2 from "../../assets/images/gallery2.png";
-import gallery3 from "../../assets/images/gallery3.png";
-import gallery4 from "../../assets/images/gallery4.png";
+import gallery1 from "../../assets/gallery/image13.jpeg";
+import gallery2 from "../../assets/gallery/image12.jpeg";
+import gallery3 from "../../assets/gallery/image17.jpeg";
+import gallery4 from "../../assets/gallery/image1.jpeg";
 
 // Replace this import if your existing dance image has a different filename.
-import danceImage from "../../assets/images/gallery5.png";
+import danceImage from "../../assets/gallery/image16.jpeg";
 
 // ================================================
 // HEADING ANIMATION

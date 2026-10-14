@@ -48,6 +48,7 @@
 
   width: 100%;
   min-height: 100vh;
+  margin-top: 200px;
 
   overflow-x: hidden;
 
@@ -605,7 +606,7 @@
    FLOATING CONTACT BUTTONS
    DESKTOP
 ========================================================= */
-
+.instagram-button,
 .call-button,
 .whatsapp-button {
   position: absolute;
@@ -685,11 +686,27 @@
   object-fit: contain;
 }
 
+.instagram-button{
+  right: 60px;
+  bottom: 25px;
+
+  width: 68px;
+  height: 68px;
+}
+
+.instagram-button img {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+}
 
 /* =========================================================
    HOVER
 ========================================================= */
-
+.instagram-button:hover,
 .call-button:hover,
 .whatsapp-button:hover {
   transform: scale(1.08);
@@ -705,6 +722,9 @@
 ========================================================= */
 
 @media (min-width: 1600px) {
+  .get-touch-page {
+    margin-top: 170px;
+  }
 
   .contact-hero {
     min-height: 610px;
@@ -724,6 +744,7 @@
     gap: 100px;
   }
 
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 72px;
@@ -740,6 +761,10 @@
     right: 85px;
   }
 
+  .instagram-button {
+    right: 285px;
+  }
+
   .call-button span {
     font-size: 34px;
   }
@@ -754,6 +779,11 @@
     height: 56px;
   }
 
+  .instagram-button img {
+    width: 56px;
+    height: 56px;
+  }
+
 
 }
 
@@ -764,6 +794,9 @@
 ========================================================= */
 
 @media (min-width: 1201px) and (max-width: 1599px) {
+  .get-touch-page {
+    margin-top: 150px;
+  }
 
   .contact-hero {
     min-height: 590px;
@@ -787,6 +820,7 @@
     margin-top: 110px;
   }
 
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 68px;
@@ -803,6 +837,10 @@
     right: 80px;
   }
 
+  .instagram-button {
+    right: 270px;
+  }
+
   .call-button span {
     font-size: 32px;
   }
@@ -817,6 +855,11 @@
     height: 52px;
   }
 
+  .instagram-button img {
+    width: 52px;
+    height: 52px;
+  }
+
 }
 
 
@@ -826,6 +869,10 @@
 ========================================================= */
 
 @media (min-width: 901px) and (max-width: 1200px) {
+
+  .get-touch-page {
+    margin-top: 80px;
+  }
 
   .contact-hero {
     min-height: 520px;
@@ -928,6 +975,7 @@
     height: 210px;
   }
 
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 62px;
@@ -944,6 +992,10 @@
     right: 35px;
   }
 
+  .instagram-button {
+    right: 200px;
+  }
+
   .call-button span {
     font-size: 29px;
   }
@@ -958,6 +1010,11 @@
     height: 48px;
   }
 
+  .instagram-button img {
+    width: 48px;
+    height: 48px;
+  }
+
 }
 
 
@@ -967,6 +1024,10 @@
 ========================================================= */
 
 @media (min-width: 768px) and (max-width: 900px) {
+
+  .get-touch-page {
+    margin-top: 80px;
+  }
 
   .contact-hero {
     min-height: 440px;
@@ -1115,7 +1176,7 @@
     height: 220px;
   }
 
-
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 62px;
@@ -1132,6 +1193,10 @@
     right: 28px;
   }
 
+  .instagram-button {
+    right: 210px;
+  }
+
   .call-button span {
     font-size: 29px;
   }
@@ -1142,6 +1207,11 @@
   }
 
   .whatsapp-button img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .instagram-button img {
     width: 48px;
     height: 48px;
   }
@@ -1158,6 +1228,7 @@
 
   .get-touch-page {
     width: 100%;
+    margin-top: 80px;
 
     overflow-x: hidden;
   }
@@ -1405,7 +1476,7 @@
     resize: vertical;
   }
 
-
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 56px;
@@ -1422,6 +1493,10 @@
     right: 18px;
   }
 
+  .instagram-button {
+    right: 190px;
+  }
+
   .call-button span {
     font-size: 27px;
   }
@@ -1436,6 +1511,11 @@
     height: 46px;
   }
 
+  .instagram-button img {
+    width: 46px;
+    height: 46px;
+  }
+
 }
 
 
@@ -1445,6 +1525,9 @@
 ========================================================= */
 
 @media (min-width: 481px) and (max-width: 600px) {
+  .get-touch-page {
+    margin-top: 80px;
+  }
 
   .contact-hero {
     padding: 60px 25px 50px;
@@ -1504,6 +1587,7 @@
     font-size: 18px;
   }
 
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 54px;
@@ -1522,6 +1606,10 @@
     right: 15px;
   }
 
+  .instagram-button {
+    right: 150px;
+  }
+
   .call-button span {
     font-size: 25px;
   }
@@ -1536,6 +1624,11 @@
     height: 44px;
   }
 
+  .instagram-button img {
+    width: 44px;
+    height: 44px;
+  }
+
 }
 
 
@@ -1545,6 +1638,10 @@
 ========================================================= */
 
 @media (min-width: 381px) and (max-width: 480px) {
+
+  .get-touch-page {
+    margin-top: 70px;
+  }
 
   .contact-hero {
     padding: 48px 18px 40px;
@@ -1651,6 +1748,7 @@
     border-radius: 13px;
   }
 
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 52px;
@@ -1669,6 +1767,10 @@
     right: 15px;
   }
 
+  .instagram-button {
+    right: 145px;
+  }
+
   .call-button span {
     font-size: 24px;
   }
@@ -1683,6 +1785,11 @@
     height: 42px;
   }
 
+  .instagram-button img {
+    width: 42px;
+    height: 42px;
+  }
+
 }
 
 
@@ -1692,6 +1799,10 @@
 ========================================================= */
 
 @media (max-width: 380px) {
+
+  .get-touch-page {
+    margin-top: 50px;
+  }
 
   .contact-hero {
     padding: 42px 16px 35px;
@@ -1852,7 +1963,7 @@
     border-radius: 12px;
   }
 
-
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 48px;
@@ -1864,11 +1975,15 @@
   }
 
   .call-button {
-    right: 60px;
+    right: 65px;
   }
 
   .whatsapp-button {
     right: 12px;
+  }
+
+  .instagram-button {
+    right: 120px;
   }
 
   .call-button span {
@@ -1885,6 +2000,10 @@
     height: 38px;
   }
 
+  .instagram-button img {
+    width: 38px;
+    height: 38px;
+  }
 
 }
 
@@ -1895,6 +2014,10 @@
 ========================================================= */
 
 @media (max-width: 320px) {
+
+  .get-touch-page {
+    margin-top: 50px;
+  }
 
   .contact-hero {
     padding: 35px 12px 30px;
@@ -2025,7 +2148,7 @@
     border-radius: 10px;
   }
 
-
+  .instagram-button,
   .call-button,
   .whatsapp-button {
     width: 44px;
@@ -2037,11 +2160,15 @@
   }
 
   .call-button {
-    right: 55px;
+    right: 60px;
   }
 
   .whatsapp-button {
     right: 10px;
+  }
+
+  .instagram-button {
+    right: 110px;
   }
 
   .call-button span {
@@ -2054,6 +2181,11 @@
   }
 
   .whatsapp-button img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .instagram-button img {
     width: 34px;
     height: 34px;
   }

@@ -549,6 +549,52 @@
     0 6px 18px rgba(39, 156, 4, 0.30);
 }
 
+
+
+/* =========================================
+   CONTACT EMAIL AND PHONE LINKS
+========================================= */
+
+.contact-email a,
+.contact-phone a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.contact-email a:hover,
+.contact-phone a:hover {
+  color: #1095b5;
+  text-decoration: underline;
+}
+
+.contact-email a:focus-visible,
+.contact-phone a:focus-visible {
+  outline: 2px solid #1095b5;
+  outline-offset: 3px;
+}
+
+/* Form fields */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #1095b5;
+  outline-offset: 2px;
+}
+
+/* Submit button */
+
+.send-button {
+  cursor: pointer;
+}
+
 /* =========================================================
    LARGE DESKTOP
    <= 1600px
