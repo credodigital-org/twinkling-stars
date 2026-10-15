@@ -2391,3 +2391,21 @@
     white-space: normal;
   }
 }
+
+/* =========================================================
+   FIX: SHOW COMPLETE GALLERY IMAGES WITHOUT CROPPING
+========================================================= */
+
+.gallery-page .gallery-card img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background-color: #ffffff;
+}
+
+/* Keep complete images visible on mobile too */
+@media (max-width: 767px) {
+  .gallery-page .gallery-card img {
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+}
