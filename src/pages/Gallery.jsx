@@ -31,7 +31,7 @@ import img11 from "../assets/gallery/image11.jpeg"
 import img12 from "../assets/gallery/image12.jpeg"
 import img13 from "../assets/gallery/image13.jpeg"
 import img14 from "../assets/gallery/image14.jpeg"
-import img15 from "../assets/gallery/image15.jpeg"
+// import img15 from "../assets/gallery/image15.jpeg"
 import img16 from "../assets/gallery/image16.jpeg"
 import img17 from "../assets/gallery/image17.jpeg"
 import img18 from "../assets/gallery/image18.jpeg"
@@ -91,12 +91,12 @@ function Gallery() {
     { title: "", image: img7, className: "science", }, 
     { title: "", image: img8, className: "graduation", }, 
     { title: "", image: img9, className: "birthday", }, 
-    { title: "", image: img10, className: "storytelling", }, 
+    // { title: "", image: img10, className: "storytelling", }, 
     { title: "", image: img11, className: "painting", }, 
     { title: "", image: img12, className: "dance", }, 
     { title: "", image: img13, className: "outdoor-play", }, 
     { title: "", image: img14, className: "classroom", }, 
-    { title: "", image: img15, className: "yoga", }, 
+    // { title: "", image: img15, className: "yoga", }, 
     { title: "", image: img16, className: "festival", }, 
     { title: "", image: img17, className: "nature-walk", }, 
     { title: "", image: img18, className: "group-activities", },
