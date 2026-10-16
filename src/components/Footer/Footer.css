@@ -863,7 +863,7 @@
 
 
   /* LOGOS */
-
+/* 
   .footer-wonder-logo {
     margin-top: 25px;
   }
@@ -872,7 +872,22 @@
     width: 55px;
 
     max-width: 100%;
-  }
+  } */
+
+  /* Footer logos on mobile */
+.footer-wonder-logo img {
+  width: 75px !important;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-winkling-logo img {
+  width: 85px !important;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
   .footer-winkling-logo {
     margin-top: 25px;
@@ -915,6 +930,13 @@
     text-align: center;
   }
 
+  .footer-wonder-logo img {
+  width: 70px !important;
+}
+
+.footer-winkling-logo img {
+  width: 80px !important;
+}
 
   /* ADDRESS */
 
@@ -945,3 +967,47 @@
     width: 50px;
   }
 }
+
+
+/* Slightly enlarge the footer logo */
+.footer-logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 150px;
+  }
+}
+
+
+/* Increase footer logo sizes */
+.site-footer .footer-wonder-logo img {
+  width: 110px !important;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.site-footer .footer-winkling-logo img {
+  width: 130px !important;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .site-footer .footer-wonder-logo img {
+    width: 95px !important;
+  }
+
+  .site-footer .footer-winkling-logo img {
+    width: 110px !important;
+  }
+}
+

@@ -90,16 +90,16 @@ function ParentTestimonials() {
         ))}
       </div>
 
-      <div className="testimonials-button-wrapper">
-        <a
-          href={GOOGLE_REVIEWS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="testimonials-button google-reviews-button"
-        >
-          Read All Google Reviews ↗
-        </a>
-      </div>
+     <div className="testimonials-button-wrapper">
+  <a
+    href={GOOGLE_REVIEWS_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="google-reviews-button"
+  >
+    Google Reviews ↗
+  </a>
+</div>
     </section>
   );
 }

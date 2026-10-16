@@ -1012,3 +1012,103 @@ body {
     padding-top: 0;
   }
 } */
+
+/* Mobile: 481px–767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar-logo-link {
+    width: 145px;
+    max-width: 42vw;
+  }
+}
+
+/* Mobile: 361px–480px */
+@media (min-width: 361px) and (max-width: 480px) {
+  .navbar-logo-link {
+    width: 115px;
+    max-width: 32vw;
+  }
+}
+
+/* Extra-small phones: 360px and below */
+@media (max-width: 360px) {
+  .navbar-logo-link {
+    width: 100px;
+    max-width: 30vw;
+  }
+}
+
+/* Tiny phones: 320px and below */
+@media (max-width: 320px) {
+  .navbar-logo-link {
+    width: 90px;
+    max-width: 28vw;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-top: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+/* FINAL MOBILE LOGO SIZE FIX */
+@media (max-width: 767px) {
+  .site-header .main-navbar .navbar-logo-link {
+    width: 140px !important;
+    max-width: 40vw !important;
+    flex-shrink: 0;
+  }
+
+  .site-header .main-navbar .navbar-logo {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .main-navbar .navbar-logo-link {
+    width: 115px !important;
+    max-width: 36vw !important;
+  }
+}
+
+
+
+/* Fix spacing below the enlarged mobile logo */
+@media (max-width: 767px) {
+  .site-header {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .main-navbar {
+    min-height: 0 !important;
+    padding-bottom: 14px !important;
+  }
+
+  body {
+    padding-top: 125px !important;
+  }
+}
+
+/* Standard mobile phones */
+@media (max-width: 480px) {
+  body {
+    padding-top: 115px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  body {
+    padding-top: 105px !important;
+  }
+}
