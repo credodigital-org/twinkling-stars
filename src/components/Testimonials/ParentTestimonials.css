@@ -1576,3 +1576,551 @@
     transform: translateY(-5px) scale(1.005) !important;
   }
 }
+
+
+/* Google review details */
+.testimonial-stars {
+  color: #f5a623;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.testimonial-source {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #777;
+}
+
+.testimonials-subtitle {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 28px;
+  padding: 0 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Google reviews button */
+.google-reviews-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px auto 0;
+  padding: 13px 26px;
+  background: #fff;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.google-reviews-button:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.google-reviews-button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
+
+.testimonials-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Fix testimonial text overflow and spacing */
+.parent-testimonials .testimonial-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-width: 0;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+.parent-testimonials .testimonial-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  word-spacing: normal;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  margin: 0;
+}
+
+.parent-testimonials .testimonial-author,
+.parent-testimonials .testimonial-source {
+  position: relative;
+  z-index: 2;
+}
+
+/* Prevent testimonial cards from clipping content */
+.parent-testimonials .testimonial-card {
+  box-sizing: border-box;
+  min-width: 0;
+  height: auto;
+  min-height: 280px;
+  overflow: visible;
+}
+
+/* Keep images properly sized */
+.parent-testimonials .testimonial-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep the reviews button centered */
+.parent-testimonials .testimonials-button-wrapper {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .parent-testimonials .testimonial-content {
+    padding: 16px;
+  }
+
+  .parent-testimonials .testimonial-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+  }
+}
+
+
+/* ===== Testimonials layout fix ===== */
+
+.parent-testimonials {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px 5%;
+  overflow: visible;
+}
+
+.parent-testimonials .testimonials-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.parent-testimonials .testimonials-subtitle {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  padding: 0 12px;
+  text-align: center;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Responsive grid: no overlapping cards */
+.parent-testimonials .testimonials-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 0;
+  align-items: stretch;
+  overflow: visible;
+}
+
+/* Reset the old individual card positioning */
+.parent-testimonials .testimonial-card,
+.parent-testimonials .testimonial-card-1,
+.parent-testimonials .testimonial-card-2,
+.parent-testimonials .testimonial-card-3,
+.parent-testimonials .testimonial-card-4,
+.parent-testimonials .testimonial-card-5 {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100% !important;
+  min-width: 0;
+  height: auto !important;
+  min-height: 0 !important;
+  box-sizing: border-box;
+
+  padding: 26px;
+  background: #ffe5e8;
+  border: 1px solid #ff9eaa;
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+
+  overflow: visible !important;
+}
+
+/* Star placeholder instead of unrelated stock photos */
+.parent-testimonials .testimonial-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 110px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+
+  background: #fff4f5;
+  border: 1px dashed #f39aa8;
+  border-radius: 16px;
+}
+
+.parent-testimonials .placeholder-stars {
+  color: #f5a623;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+.parent-testimonials .placeholder-label {
+  color: #8b5360;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Full, readable review text */
+.parent-testimonials .testimonial-content {
+  position: relative !important;
+  width: 100%;
+  min-width: 0;
+  height: auto !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow: visible !important;
+}
+
+.parent-testimonials .testimonial-content p {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  margin: 12px 0 18px;
+  padding: 0;
+
+  color: #292929;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+  word-spacing: normal;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  overflow: visible !important;
+}
+
+.parent-testimonials .testimonial-stars {
+  color: #f5a623;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.parent-testimonials .testimonial-author {
+  display: block;
+  margin-top: 10px;
+  color: #282828;
+  font-weight: 700;
+}
+
+.parent-testimonials .testimonial-source {
+  display: block;
+  margin-top: 5px;
+  color: #777;
+  font-size: 12px;
+}
+
+/* Hide oversized decorative quotes from the old layout */
+.parent-testimonials .quote {
+  display: none !important;
+}
+
+/* Center the Google reviews button */
+.parent-testimonials .testimonials-button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 32px auto 0;
+}
+
+.parent-testimonials .google-reviews-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 13px 25px;
+  margin: 0;
+
+  background: #fff;
+  color: #b83d52;
+  border: 1px solid #b83d52;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.parent-testimonials .google-reviews-button:hover {
+  background: #b83d52;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Tablet and mobile */
+@media (max-width: 767px) {
+  .parent-testimonials {
+    padding: 40px 18px;
+  }
+
+  .parent-testimonials .testimonials-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .parent-testimonials .testimonial-card,
+  .parent-testimonials .testimonial-card-1,
+  .parent-testimonials .testimonial-card-2,
+  .parent-testimonials .testimonial-card-3,
+  .parent-testimonials .testimonial-card-4,
+  .parent-testimonials .testimonial-card-5 {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .parent-testimonials .testimonial-placeholder {
+    min-height: 85px;
+  }
+
+  .parent-testimonials .testimonial-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+  }
+
+  .parent-testimonials .placeholder-stars {
+    font-size: 22px;
+  }
+}
+
+
+/* ===== FINAL TESTIMONIAL OVERFLOW FIX ===== */
+
+.parent-testimonials,
+.parent-testimonials * {
+  box-sizing: border-box;
+}
+
+.parent-testimonials {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 50px 5%;
+  overflow: visible !important;
+}
+
+/* Two-column responsive layout */
+.parent-testimonials .testimonials-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-rows: auto !important;
+  align-items: stretch !important;
+  gap: 28px !important;
+
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 1200px;
+  margin: 35px auto 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Cancel all old card positioning and sizing */
+.parent-testimonials .testimonial-card,
+.parent-testimonials .testimonial-card-1,
+.parent-testimonials .testimonial-card-2,
+.parent-testimonials .testimonial-card-3,
+.parent-testimonials .testimonial-card-4,
+.parent-testimonials .testimonial-card-5 {
+  position: relative !important;
+  inset: auto !important;
+  float: none !important;
+  transform: none !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-self: stretch !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 24px !important;
+
+  background: #ffe5e8 !important;
+  border: 1px solid #ff9eaa;
+  border-radius: 24px;
+
+  overflow: visible !important;
+}
+
+/* Placeholder stays inside each card */
+.parent-testimonials .testimonial-placeholder {
+  position: relative !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  max-height: none !important;
+  margin: 0 0 20px !important;
+  padding: 12px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+
+  background: #fff5f6;
+  border: 1px dashed #f39aa8;
+  border-radius: 16px;
+}
+
+/* Text must be allowed to grow naturally */
+.parent-testimonials .testimonial-content {
+  position: static !important;
+  display: block !important;
+
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.parent-testimonials .testimonial-content p {
+  display: block !important;
+  position: static !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 12px 0 18px !important;
+  padding: 0 !important;
+
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  word-spacing: normal;
+
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+
+  overflow: visible !important;
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: initial !important;
+}
+
+.parent-testimonials .testimonial-author,
+.parent-testimonials .testimonial-source {
+  position: static !important;
+  display: block !important;
+  height: auto !important;
+  overflow: visible !important;
+  margin-top: 8px;
+}
+
+.parent-testimonials .quote {
+  display: none !important;
+}
+
+/* Remove old animation transforms that may move cards */
+.parent-testimonials .animated-card {
+  transform: none !important;
+}
+
+/* Button after all cards */
+.parent-testimonials .testimonials-button-wrapper {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  height: auto !important;
+  margin: 32px auto 0 !important;
+}
+
+/* Mobile: one card per row */
+@media (max-width: 767px) {
+  .parent-testimonials {
+    padding: 35px 18px;
+  }
+
+  .parent-testimonials .testimonials-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .parent-testimonials .testimonial-card,
+  .parent-testimonials .testimonial-card-1,
+  .parent-testimonials .testimonial-card-2,
+  .parent-testimonials .testimonial-card-3,
+  .parent-testimonials .testimonial-card-4,
+  .parent-testimonials .testimonial-card-5 {
+    padding: 18px !important;
+    border-radius: 18px;
+  }
+
+  .parent-testimonials .testimonial-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

@@ -1,47 +1,34 @@
 import "./ParentTestimonials.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
-import parent1 from "../../assets/images/parent1.png";
-import parent2 from "../../assets/images/parent2.png";
-import parent3 from "../../assets/images/parent3.png";
-import parent4 from "../../assets/images/parent4.png";
-import parent5 from "../../assets/images/parent5.png";
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/search?kgmid=/g/11yzm4b28l&q=Twinkling+Stars+A+Daycare+%26+Preschool#lrd=0x3e5e679882983261:0x7df8eb5683e49533,1";
 
 const testimonials = [
   {
-    image: parent1,
-    className: "testimonial-card-1",
-    imageClass: "image-large",
+    name: "Sanvith Shetty",
     text:
-      "Lorem ipsum dolor sit amet consectetur. Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus dui ultrices.",
+      "We have had a wonderful experience with this preschool and daycare. The activities organized for the children are engaging, fun, and contribute so much to their overall development.",
   },
   {
-    image: parent3,
-    className: "testimonial-card-2",
-    imageClass: "image-small",
+    name: "Riya Pai",
     text:
-      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus du. Amet mi imperdiet iasewu",
+      "It's a very nice daycare and preschool nursery. I am very happy with the environment over there. The staff are caring towards the children.",
   },
   {
-    image: parent2,
-    className: "testimonial-card-3",
-    imageClass: "image-medium",
+    name: "Sujitha",
     text:
-      "Lorem ipsum dolor sit amet consectetur. Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus dui ultrices. Interdum sit nulla leo nisl eleifend.",
+      "A wonderful nursery with a warm and welcoming environment. The staff are very caring, friendly, and attentive to the children. The nursery is clean and provides a safe and happy atmosphere for kids to learn and grow.",
   },
   {
-    image: parent5,
-    className: "testimonial-card-4",
-    imageClass: "image-small",
+    name: "Jamcy Jose",
     text:
-      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus. Amet mi imperdiet iaculis lectus du lorem ipsum det fetrghwety.",
+      "Excellent in quality, affordable fees... truly recommend it to all parents.",
   },
   {
-    image: parent4,
-    className: "testimonial-card-5",
-    imageClass: "image-square",
+    name: "Sooraj Hussain",
     text:
-      "Interdum sit nulla leo nisl eleifend. Amet mi imperdiet iaculis lectus du. Amet mi imperdiet iasewu",
+      "We are very happy with the nursery. The teachers are caring, supportive, and professional. Our daughter enjoys attending and has grown in confidence and learning.",
   },
 ];
 
@@ -57,62 +44,61 @@ function ParentTestimonials() {
         id="parent-testimonials-title"
         className="testimonials-title"
       >
-        Parent Testimonials
+        What Parents Say About Us
       </h2>
 
+      <p className="testimonials-subtitle">
+        Discover what parents appreciate about Twinkling Stars
+        A Daycare & Preschool.
+      </p>
+
       <div className="testimonials-container stagger">
-
-        {testimonials.map(
-          (testimonial, index) => (
-            <article
-              className={`testimonial-card ${testimonial.className} animated-card`}
-              key={index}
+        {testimonials.map((testimonial) => (
+          <article
+            className="testimonial-card animated-card"
+            key={testimonial.name}
+          >
+            <div
+              className="testimonial-placeholder"
+              aria-hidden="true"
             >
-              {index === 0 && (
-                <div
-                  className="quote quote-top"
-                  aria-hidden="true"
-                >
-                  “
-                </div>
-              )}
+              <span className="placeholder-stars">★★★★★</span>
+              <span className="placeholder-label">
+                Parent Review
+              </span>
+            </div>
 
+            <div className="testimonial-content">
               <div
-                className={`testimonial-image ${testimonial.imageClass}`}
+                className="testimonial-stars"
+                aria-label="5 out of 5 stars"
               >
-                <img
-                  src={testimonial.image}
-                  alt="Parent testimonial"
-                  loading="lazy"
-                  className="animated-image"
-                />
+                ★★★★★
               </div>
 
-              <div className="testimonial-content">
-                <p>{testimonial.text}</p>
-              </div>
+              <p>{testimonial.text}</p>
 
-              {index === testimonials.length - 1 && (
-                <div
-                  className="quote quote-bottom"
-                  aria-hidden="true"
-                >
-                  ”
-                </div>
-              )}
-            </article>
-          )
-        )}
+              <span className="testimonial-author">
+                {testimonial.name}
+              </span>
 
+              <span className="testimonial-source">
+                Google Review
+              </span>
+            </div>
+          </article>
+        ))}
       </div>
 
       <div className="testimonials-button-wrapper">
-        {/* <button
-          type="button"
-          className="testimonials-button animated-button"
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="testimonials-button google-reviews-button"
         >
-          VIEW MORE
-        </button> */}
+          Read All Google Reviews ↗
+        </a>
       </div>
     </section>
   );
