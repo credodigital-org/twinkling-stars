@@ -1,3 +1,4 @@
+import useSeo from "../hooks/useSeo";
 import "./Contact.css";
 import { useEffect } from "react";
 
@@ -7,6 +8,13 @@ import callicon from "../assets/images/call.png";
 import instagram from "../assets/images/Instagram.png";
 
 function GetInTouch() {
+  useSeo({
+    title: "Contact & Admissions | Twinkling Stars Nursery Abu Dhabi",
+    description:
+      "Contact Twinkling Stars Nursery in Abu Dhabi by phone or WhatsApp for admissions, fees and visits.",
+    path: "/contact",
+  });
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
