@@ -104,7 +104,7 @@ function App() {
 
           {/* CALL BUTTON */}
           <a
-            href="tel: +971564740473"
+            href="tel:+971564740473"
             className="contact-btn call-btn"
             aria-label="Call Us"
           >

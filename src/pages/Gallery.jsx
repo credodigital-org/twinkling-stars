@@ -1,3 +1,4 @@
+import useSeo from "../hooks/useSeo";
 // import "./Gallery.css";
 
 // import { useEffect } from "react";
@@ -320,6 +321,13 @@ import teddyImage from "../assets/images/journey-bear.png";
 ========================================================= */
 
 function Gallery() {
+  useSeo({
+    title: "Gallery | Twinkling Stars Nursery Abu Dhabi",
+    description:
+      "See classroom activities, outdoor play, arts and crafts, sports day and celebrations at Twinkling Stars Nursery in Abu Dhabi.",
+    path: "/gallery",
+  });
+
   const navigate = useNavigate();
 
   /* =======================================================

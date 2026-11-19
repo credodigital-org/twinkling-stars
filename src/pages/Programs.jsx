@@ -1,3 +1,4 @@
+import useSeo from "../hooks/useSeo";
 import { useEffect } from "react";
 import "./Program.css";
 import { useNavigate } from "react-router-dom";
@@ -202,6 +203,13 @@ function ProgramCard({
 
 
 function Programs() {
+  useSeo({
+    title: "Programs | Twinkling Stars Nursery Abu Dhabi",
+    description:
+      "Explore preschool, KG, daycare and after-school programs plus zumba, dance, yoga, art and music activities at Twinkling Stars Nursery, Abu Dhabi.",
+    path: "/programs",
+  });
+
   const navigate = useNavigate();
 
    useEffect(() => {

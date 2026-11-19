@@ -1,3 +1,4 @@
+import useSeo from "../hooks/useSeo";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import RegularPrograms from "../components/RegularPrograms/Programs";
@@ -14,6 +15,13 @@ import flowerImage from "../assets/images/stars.png";
 import useScrollReveal from "../hooks/useScrollReveal";
 
 function Home() {
+  useSeo({
+    title: "Twinkling Stars Nursery Abu Dhabi | Preschool, KG & Daycare",
+    description:
+      "Twinkling Stars is a nursery in Abu Dhabi offering preschool, KG, daycare and after-school programs with transport. Enquire about admissions today.",
+    path: "/",
+  });
+
   useScrollReveal();
   return (
     <>
